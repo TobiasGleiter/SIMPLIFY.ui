@@ -1,0 +1,13 @@
+/* || RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* || GENERAL */
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-size: var(--text-base);
+}
