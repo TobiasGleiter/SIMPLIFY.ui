@@ -1,0 +1,29 @@
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form__group {
+  margin-bottom: 16px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--foreground-muted-color);
+  background-color: var(--foreground-color);
+  border-radius: 4px;
+}
+
+.form__submit {
+  background-color: var(--primary-color);
+  color: var(--foreground-color);
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--border-radius);
+}

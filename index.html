@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/components/list.css" />
     <link rel="stylesheet" href="css/components/link.css" />
     <link rel="stylesheet" href="css/components/heading.css" />
+    <link rel="stylesheet" href="css/components/card.css" />
+    <link rel="stylesheet" href="css/components/form.css" />
   </head>
   <body>
     <div class="body__wrapper">
@@ -52,14 +54,25 @@
           <div class="section__testimonials-list">
             <div class="card">
               <h2 class="card__title">Card title</h2>
-              <p class="card_description">Card description</p>
+              <p class="card__content">Card description</p>
             </div>
           </div>
         </section>
+        <section>
+          <form class="form">
+            <div class="form__group">
+              <label for="name" class="form__label">Name</label>
+              <input type="text" id="name" class="form__input" />
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" class="form__input" />
+            </div>
+            <input type="submit" value="Submit" class="form__submit" />
+          </form>
+        </section>
         <section class="section__call-to-action">
           <button class="button button--primary button--large">
-            Call to Action?</button
-          ><button class="button button--secondary button--large">
             Call to Action?
           </button>
         </section>
