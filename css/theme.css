@@ -8,12 +8,15 @@
   --primary-color: hsl(120, 48%, 62%);
   --secondary-color: hsl(0, 48%, 62%);
 
-  --gap: 4px;
+  --gap: 8px;
   --border-radius: 4px;
 
-  --text--large: 24px;
+  --text-3xl: 48px;
+  --text-2xl: 28px;
+  --text-xl: 24px;
+  --text-large: 18px;
   --text-base: 16px;
-  --text-small: 12px;
+  --text-small: 14px;
 }
 
 @media (prefers-color-scheme: dark) {

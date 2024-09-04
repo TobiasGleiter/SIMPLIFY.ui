@@ -1,0 +1,17 @@
+/* HEADING */
+.heading {
+  margin-bottom: 8px;
+  font-size: var(--text-base);
+}
+
+.heading__text--3xl {
+  font-size: var(--text-3xl);
+}
+
+.heading__text--2xl {
+  font-size: var(--text-2xl);
+}
+
+.heading__text--large {
+  font-size: var(--text-large);
+}

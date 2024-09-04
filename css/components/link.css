@@ -1,0 +1,16 @@
+.link {
+  text-decoration: none;
+  color: var(--foreground-color);
+}
+
+.link:hover {
+  color: var(--foreground-muted-color);
+}
+
+.link__text--muted {
+  color: var(--foreground-muted-color);
+}
+
+.link__text--muted:hover {
+  color: var(--foreground-color);
+}

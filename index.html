@@ -4,54 +4,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple UI Library</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/theme.css" />
-    <link rel="stylesheet" href="css/menu.css" />
-    <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="css/components/menu.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/components/list.css" />
+    <link rel="stylesheet" href="css/components/link.css" />
+    <link rel="stylesheet" href="css/components/heading.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul class="menu menu__list">
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Home</a>
-          </li>
-          <li class="menu__list-item">
-            <a href="#" class="menu__link">Why</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <section class="section__hero">
-        <div class="section__hero-left">
-          <h1>Heading</h1>
-          <p>Some text...</p>
-        </div>
-        <div class="section_hero-right">
-          <img />
-        </div>
-      </section>
-      <section class="section__testimonials">
-        <div class="section__testimonials-list">
-          <div class="card">
-            <h2 class="card__title">Card title</h2>
-            <p class="card_description">Card description</p>
+    <div class="body__wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div>LOGO</div>
+          <nav>
+            <ul class="menu menu__list">
+              <li class="menu__list-item">
+                <a href="#" class="menu__link">Home</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="#" class="menu__link">Why</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <button class="button button--primary">Sign up</button>
           </div>
         </div>
-      </section>
-      <section class="section__call-to-action">
-        <button class="button button__primary button__large">
-          Call to Action?</button
-        ><button class="button button__secondary button__small">
-          Call to Action?
-        </button>
-      </section>
-    </main>
-    <footer class="footer">
-      <nav class="footer__nav"></nav>
-      <nav class="footer__nav"></nav>
-      <nav class="footer__nav"></nav>
-    </footer>
+      </header>
+      <main class="main">
+        <section class="hero">
+          <div>
+            <h1 class="heading heading__text--3xl">
+              Learn here. Dream here. Develop here.
+            </h1>
+            <p>Description...</p>
+          </div>
+          <div>
+            <button class="button button--primary">Sign up with email</button>
+          </div>
+        </section>
+        <section class="section__testimonials">
+          <div class="section__testimonials-list">
+            <div class="card">
+              <h2 class="card__title">Card title</h2>
+              <p class="card_description">Card description</p>
+            </div>
+          </div>
+        </section>
+        <section class="section__call-to-action">
+          <button class="button button--primary button--large">
+            Call to Action?</button
+          ><button class="button button--secondary button--large">
+            Call to Action?
+          </button>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__links">
+            <div class="footer__links-list">
+              <h6 class="heading heading__text--large">Company</h6>
+              <ul class="list list__text--small">
+                <li><a href="#" class="link link__text--muted">About</a></li>
+                <li>
+                  <a href="#" class="link link__text--muted">Leadership</a>
+                </li>
+                <li><a href="#" class="link link__text--muted">Blog</a></li>
+              </ul>
+            </div>
+            <div class="footer__links-list">
+              <h6 class="heading heading__text--large">Products</h6>
+              <ul class="list list__text--small">
+                <li>
+                  <a href="#" class="link link__text--muted"
+                    >Product Overview</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="link link__text--muted">Functions</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__links-list">
+              <h6 class="heading heading__text--large">Contact</h6>
+              <ul class="list list__text--small">
+                <li><a href="#" class="link link__text--muted">Support</a></li>
+                <li><a href="#" class="link link__text--muted">Sales</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <span>LOGO (C)2024</span>
+            <a>Privacy</a>
+            <a>Other Stuff</a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

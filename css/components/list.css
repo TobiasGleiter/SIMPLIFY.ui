@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: var(--gap);
+}
+
+.list__text--small {
+  font-size: var(--text-small);
+}
