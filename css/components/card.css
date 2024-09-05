@@ -1,12 +1,21 @@
 .card {
-  border: 1px solid var(--foreground-color);
-  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  background-color: var(--card-background-color);
+  border: 1px solid var(--foreground-muted-color);
+  border-radius: calc(var(--border-radius) * 2);
   padding: 16px;
+  gap: var(--gap);
 }
 
 .card__title {
   font-size: var(--text-large);
-  margin-bottom: 10px;
+  margin-bottom: 4px;
+}
+
+.card__description {
+  font-size: var(--text-small);
 }
 
 .card__content {

@@ -2,8 +2,10 @@
 .button {
   padding: 8px 16px;
 
+  display: inline-block;
+
   border: 0 solid transparent;
-  border-radius: var(--border-radius);
+  border-radius: 9999px;
 
   cursor: pointer;
 
@@ -17,8 +19,9 @@
 }
 
 .button--large {
-  padding: 16px 32px;
-  font-size: var(--text-large);
+  padding: 8px 16px;
+  line-height: 24px;
+  font-size: var(--text-base);
 }
 
 .button--primary {
@@ -39,4 +42,8 @@
 .button--secondary:hover {
   color: var(--background-color);
   background-color: var(--foreground-color);
+}
+
+.button--border-radius-small {
+  border-radius: calc(var(--border-radius) - 2px);
 }

@@ -10,7 +10,7 @@ body {
   background-color: var(--background-color);
   color: var(--foreground-color);
   font-size: var(--text-base);
-  font-family: "Inter";
+  font-family: "Helvetica", Sans-Serif;
 
   height: 100%;
   margin: 0;
@@ -75,4 +75,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--gap);
 }

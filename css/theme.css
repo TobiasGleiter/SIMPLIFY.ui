@@ -3,7 +3,9 @@
   --foreground-color: hsl(0, 0%, 10%);
   --foreground-muted-color: hsl(0, 0%, 20%);
   --background-color: hsl(0, 0%, 100%);
-  --background-muted-color: hsl(0, 0%, 80%);
+  --background-muted-color: hsl(0, 0%, 97%);
+
+  --card-background-color: hsl(00, 0%, 90%);
 
   --primary-color: hsl(120, 48%, 62%);
   --secondary-color: hsl(0, 48%, 62%);
@@ -17,13 +19,16 @@
   --text-large: 18px;
   --text-base: 16px;
   --text-small: 14px;
+  --text-xs: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-color: hsl(0, 0%, 100%);
     --foreground-muted-color: hsl(0, 0%, 80%);
     --background-color: hsl(0, 0%, 10%);
-    --background-muted-color: hsl(0, 0%, 20%);
+    --background-muted-color: hsl(0, 0%, 12%);
+
+    --card-background-color: hsl(00, 0%, 20%);
   }
-}
+} */
