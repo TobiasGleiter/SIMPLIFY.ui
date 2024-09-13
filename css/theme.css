@@ -1,17 +1,19 @@
 /* || THEME & FONTS*/
 :root {
-  --foreground-color: hsl(0, 0%, 10%);
-  --foreground-muted-color: hsl(0, 0%, 20%);
-  --background-color: hsl(0, 0%, 100%);
-  --background-muted-color: hsl(0, 0%, 97%);
+  --foreground-color: hsla(0, 0%, 20%, 1);
+  --foreground-muted-color: hsla(0, 0%, 60%, 1);
+  --background-color: hsla(0, 0%, 100%, 1);
+  --background-muted-color: hsla(0, 46%, 95%, 1);
 
-  --card-background-color: hsl(00, 0%, 90%);
+  --primary-color: hsla(0, 48%, 62%, 1);
+  --secondary-color: hsla(120, 48%, 62%, 1);
 
-  --primary-color: hsl(120, 48%, 62%);
-  --secondary-color: hsl(0, 48%, 62%);
-
-  --gap: 8px;
+  --padding: 4px;
+  --gap: 4px;
   --border-radius: 4px;
+
+  --shadow: 0 5px 15px 0 #00000026;
+  --shadow-active: 0 5px 5px 0 #00000026;
 
   --text-3xl: 48px;
   --text-2xl: 28px;
@@ -19,7 +21,6 @@
   --text-large: 18px;
   --text-base: 16px;
   --text-small: 14px;
-  --text-xs: 10px;
 }
 
 /* @media (prefers-color-scheme: dark) {

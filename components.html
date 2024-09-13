@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple UI Library</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/components/menu.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/components/list.css" />
+    <link rel="stylesheet" href="css/components/link.css" />
+    <link rel="stylesheet" href="css/components/heading.css" />
+    <link rel="stylesheet" href="css/components/card.css" />
+    <link rel="stylesheet" href="css/components/form.css" />
+    <link rel="stylesheet" href="css/components/dialog.css" />
+    <link rel="stylesheet" href="css/components/input.css" />
+    <link rel="stylesheet" href="css/components/label.css" />
+    <link rel="stylesheet" href="css/components/accordion.css" />
+    <link rel="stylesheet" href="css/components/select.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <section>
+          <button
+            tabindex="0"
+            aria-pressed="false"
+            class="button button--primary"
+          >
+            Buttons
+          </button>
+          <button
+            tabindex="0"
+            aria-pressed="false"
+            class="button button--secondary"
+          >
+            Buttons
+          </button>
+          <button
+            tabindex="0"
+            aria-pressed="false"
+            class="button button--light button--small"
+          >
+            Buttons
+          </button>
+          <button
+            tabindex="0"
+            aria-pressed="false"
+            class="button button--dark button--large"
+          >
+            Buttons
+          </button>
+        </section>
+      </section>
+      <section>
+        <button
+          tabindex="0"
+          aria-pressed="false"
+          class="button button--dark button--large"
+          onclick="dialog.showModal()"
+        >
+          Open Dialog
+        </button>
+        <dialog id="dialog" class="dialog">
+          <div class="dialog__layout">
+            <div class="dialog__header">
+              <h2>Edit profile</h2>
+              <p>
+                Make changes to your profile here. Click save when you're done.
+              </p>
+            </div>
+            <div class="dialog__content">
+              <div>
+                <label for="name" class="label">Name</label>
+                <input
+                  class="input"
+                  id="name"
+                  type="text"
+                  placeholder="John Doe"
+                  aria-placeholder="John Doe"
+                />
+              </div>
+              <div>
+                <label for="email" class="label">E-Mail</label>
+                <input
+                  class="input"
+                  id="email"
+                  type="text"
+                  placeholder="john@doe.com"
+                  aria-placeholder="john@doe.com"
+                />
+              </div>
+              <button
+                tabindex="0"
+                aria-pressed="false"
+                onclick="dialog.close()"
+                class="button"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </dialog>
+      </section>
+      <section>
+        <details name="faq" class="accordion">
+          <summary class="accordion__summary">Is it accessible?</summary>
+          <p class="accordion__content">Yes!</p>
+        </details>
+        <details name="faq" class="accordion">
+          <summary class="accordion__summary">Is it styled?</summary>
+          <p class="accordion__content">Yes!</p>
+        </details>
+        <details name="faq" class="accordion">
+          <summary class="accordion__summary">Is it animated?</summary>
+          <p class="accordion__content">Yes but only using css and html!</p>
+        </details>
+      </section>
+      <section>
+        <label for="pet-select" class="label">Choose a pet</label>
+
+        <select name="pets" id="pet-select" class="select">
+          <option value="" class="select__option">Choose a pet</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="hamster">Hamster</option>
+          <option value="parrot">Parrot</option>
+          <option value="spider">Spider</option>
+          <option value="goldfish">Goldfish</option>
+        </select>
+      </section>
+    </main>
+  </body>
+</html>

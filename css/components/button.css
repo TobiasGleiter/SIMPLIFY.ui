@@ -1,27 +1,20 @@
 /* BUTTONS */
 .button {
-  padding: 8px 16px;
-
-  display: inline-block;
-
-  border: 0 solid transparent;
+  display: block;
+  box-sizing: border-box;
+  font-size: var(--text-base);
+  border: 1px solid transparent;
   border-radius: 9999px;
-
+  padding: 8px 16px;
   cursor: pointer;
-
-  color: var(--background-color);
-  background-color: var(--foreground-color);
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+  transition: 0.1s ease;
 }
 
 .button:hover {
-  color: var(--foreground-color);
-  background-color: var(--background-muted-color);
-}
-
-.button--large {
-  padding: 8px 16px;
-  line-height: 24px;
-  font-size: var(--text-base);
+  color: var(--background-color);
+  background-color: var(--foreground-color);
 }
 
 .button--primary {
@@ -29,21 +22,29 @@
   background-color: var(--primary-color);
 }
 
-.button--primary:hover {
-  color: var(--background-color);
-  background-color: var(--foreground-color);
-}
-
 .button--secondary {
   color: var(--foreground-color);
   background-color: var(--secondary-color);
 }
 
-.button--secondary:hover {
+.button--light {
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+.button--dark {
   color: var(--background-color);
   background-color: var(--foreground-color);
 }
 
-.button--border-radius-small {
-  border-radius: calc(var(--border-radius) - 2px);
+.button--dark:hover {
+  background-color: var(--primary-color);
+}
+
+.button--large {
+  font-size: var(--text-base);
+}
+
+.button--small {
+  font-size: var(--text-small);
 }
