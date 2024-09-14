@@ -1,0 +1,50 @@
+/* BUTTONS */
+.button {
+  display: block;
+  box-sizing: border-box;
+  font-size: var(--text-base);
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: var(--foreground-color);
+  background-color: var(--background-muted-color);
+  transition: 0.1s ease;
+}
+
+.button:hover {
+  color: var(--background-color);
+  background-color: var(--foreground-color);
+}
+
+.button--primary {
+  color: var(--foreground-color);
+  background-color: var(--primary-color);
+}
+
+.button--secondary {
+  color: var(--foreground-color);
+  background-color: var(--secondary-color);
+}
+
+.button--light {
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+.button--dark {
+  color: var(--background-color);
+  background-color: var(--foreground-color);
+}
+
+.button--dark:hover {
+  background-color: var(--primary-color);
+}
+
+.button--large {
+  font-size: var(--text-base);
+}
+
+.button--small {
+  font-size: var(--text-small);
+}
