@@ -12,6 +12,7 @@ class ButtonBase extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/button.css" />
+      
       <button
         tabindex="0"
         aria-pressed="false"
@@ -36,6 +37,7 @@ class ButtonPrimary extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/button.css" />
+
       <button
         tabindex="0"
         aria-pressed="false"
@@ -60,6 +62,7 @@ class ButtonSecondary extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/button.css" />
+
       <button
         tabindex="0"
         aria-pressed="false"
@@ -84,6 +87,7 @@ class ButtonDark extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/button.css" />
+      
       <button
         tabindex="0"
         aria-pressed="false"
@@ -95,7 +99,7 @@ class ButtonDark extends HTMLElement {
   }
 }
 
-customElements.define('button--base', ButtonBase)
-customElements.define("button--primary", ButtonPrimary)
+customElements.define('button--base', ButtonBase);
+customElements.define('button--primary', ButtonPrimary);
 customElements.define('button--secondary', ButtonSecondary);
-customElements.define("button--dark", ButtonDark)
+customElements.define('button--dark', ButtonDark);

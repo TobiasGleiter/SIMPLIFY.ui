@@ -18,7 +18,6 @@ class DialogBase extends HTMLElement {
 
   render() {
     this.shadowRoot.innerHTML = `
-            <link rel="stylesheet" href="css/base.css" />
             <link rel="stylesheet" href="ui/dialog.css" />
 
             <dialog class="dialog">
@@ -28,7 +27,9 @@ class DialogBase extends HTMLElement {
                     <p><slot name="description"></slot></p>
                 </div>
                 <div class="dialog__content">
+                  <div>
                     <slot name="content"></slot>
+                  </div>
                 </div>
             </div>
             </dialog>
