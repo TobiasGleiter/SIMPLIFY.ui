@@ -23,13 +23,11 @@ class DialogBase extends HTMLElement {
             <dialog class="dialog">
             <div class="dialog__layout">
                 <div class="dialog__header">
-                    <h2><slot name="header"></slot></h2>
+                    <h1><slot name="header"></slot></h1>
                     <p><slot name="description"></slot></p>
                 </div>
                 <div class="dialog__content">
-                  <div>
-                    <slot name="content"></slot>
-                  </div>
+                  <slot name="content"></slot>
                 </div>
             </div>
             </dialog>

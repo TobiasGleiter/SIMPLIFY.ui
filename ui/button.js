@@ -1,4 +1,3 @@
-/* BUTTONS */
 class ButtonBase extends HTMLElement {
   constructor() {
     super();
