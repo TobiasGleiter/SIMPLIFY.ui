@@ -1,0 +1,19 @@
+select {
+  appearance: none;
+  border: none;
+  padding: 0 var(--padding) 0 0;
+  margin: 0;
+  width: 100%;
+}
+
+.select {
+  border: 1px solid var(--foreground-color);
+  border-radius: var(--border-radius);
+  padding: calc(var(--padding) * 2);
+  font-size: var(--text-base);
+  cursor: pointer;
+}
+
+.select::-ms-expand {
+  display: none;
+}

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple UI Library</title>
     <link rel="stylesheet" href="ui/button.css" />
-    <link rel="stylesheet" href="css/components/input.css" />
+    <link rel="stylesheet" href="ui/input.css" />
+    <link rel="stylesheet" href="ui/label.css" />
     <!-- Requried Styles Below -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/theme.css" />
@@ -21,8 +22,8 @@
       <section>
         <button--base onclick="profile.showModal()">Edit Profile</button--base>
         <dialog--base id="profile">
-          <span slot="header">Edit Profile</span>
-          <span slot="description">Make changes to your profile here. Click save when you're done.</span>
+          <div slot="header">Edit Profile</div>
+          <div slot="description">Make changes to your profile here. Click save when you're done.</div>
           <div slot="content">
             <label for="name" class="label">Name</label>
             <input class="input" id="name" type="text" placeholder="John Doe" aria-placeholder="John Doe" />
@@ -61,17 +62,24 @@
         <input--base id="nickname" placeholder="Doe" />
       </section>
       <section>
-        <label for="pet-select" class="label">Choose a pet</label>
-
-        <select name="pets" id="pet-select" class="select">
-          <option value="" class="select__option">Choose a pet</option>
-          <option value="dog">Dog</option>
-          <option value="cat">Cat</option>
-          <option value="hamster">Hamster</option>
-          <option value="parrot">Parrot</option>
-          <option value="spider">Spider</option>
-          <option value="goldfish">Goldfish</option>
-        </select>
+        <select--base name="gender" placeholder="Choose a sex">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select--base>
+      </section>
+      <section>
+        <card--base>
+          <div slot="header">Edit Profile</div>
+          <div slot="description">Make changes to your profile here. Click save when you're done.</div>
+          <div slot="content">
+            <label for="name" class="label">Name</label>
+            <input class="input" id="name" type="text" placeholder="John Doe" aria-placeholder="John Doe" />
+            <label for="email" class="label">E-Mail</label>
+            <input class="input" id="email" type="text" placeholder="john@doe.com" aria-placeholder="john@doe.com" />
+          </div>
+          <div slot="footer"><button tabindex="0" aria-pressed="false" class="button">Save</button></div>
+        </card--base>
       </section>
     </main>
     <script src="ui/button.js" type="text/javascript"></script>
@@ -79,5 +87,7 @@
     <script src="ui/input.js" type="text/javascript"></script>
     <script src="ui/label.js" type="text/javascript"></script>
     <script src="ui/accordion.js" type="text/javascript"></script>
+    <script src="ui/select.js" type="text/javascript"></script>
+    <script src="ui/card.js" type="text/javascript"></script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+h1,
+p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  padding: calc(var(--padding) * 4);
+  font-size: var(--test-base);
+  border: 1px solid var(--foreground-color);
+  border-radius: var(--border-radius);
+  gap: calc(var(--gap) * 4);
+  box-shadow: var(--shadow);
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__header h1 {
+  font-size: var(--text-large);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.card__header p {
+  font-size: var(--text-small);
+  color: var(--foreground-muted-color);
+}
+
+.card__content {
+  font-size: var(--text-base);
+}
+
+.card__footer {
+}

@@ -1,12 +1,8 @@
-.input[type="text"] {
+.input {
   width: 100%;
   padding: calc(var(--padding) * 2);
   box-sizing: border-box;
-  border: 2px solid var(--foreground-color);
+  font-size: var(--test-small);
+  border: 1px solid var(--foreground-color);
   border-radius: var(--border-radius);
-  outline: none;
-}
-
-.input[type="text"]:focus {
-  border: 2px solid var(--primary-color);
 }
