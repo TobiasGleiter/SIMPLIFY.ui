@@ -30,8 +30,6 @@ class AccordionBase extends HTMLElement {
   }
 
   render() {
-    const groupName = this.getAttribute('name');
-
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/accordion.css" />
 
