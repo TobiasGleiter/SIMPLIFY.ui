@@ -10,6 +10,7 @@ dialog {
   border: 1px solid var(--foreground-color);
   border-radius: var(--border-radius);
   padding: calc(var(--padding) * 4);
+  padding-bottom: calc(var(--padding) * 8);
 }
 
 .dialog {
@@ -18,7 +19,6 @@ dialog {
   gap: calc(var(--gap) * 4);
   border: 0 solid transparent;
   border-radius: var(--border-radius);
-  padding-bottom: calc(var(--padding) * 4);
   position: relative;
 }
 

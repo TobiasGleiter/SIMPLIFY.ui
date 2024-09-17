@@ -9,6 +9,7 @@ p {
   display: inline-flex;
   flex-direction: column;
   padding: calc(var(--padding) * 4);
+  padding-bottom: calc(var(--padding) * 8);
   font-size: var(--test-base);
   border: 1px solid var(--foreground-color);
   border-radius: var(--border-radius);
@@ -19,12 +20,12 @@ p {
 .card__header {
   display: flex;
   flex-direction: column;
+  gap: var(--gap);
 }
 
 .card__header h1 {
   font-size: var(--text-large);
   font-weight: bold;
-  margin-bottom: 4px;
 }
 
 .card__header p {
