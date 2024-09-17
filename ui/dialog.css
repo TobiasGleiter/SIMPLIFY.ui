@@ -6,18 +6,20 @@ p {
   box-sizing: border-box;
 }
 
-.dialog {
-  border: 2px solid var(--foreground-color);
-  border-radius: calc(var(--border-radius) * 2);
+dialog {
+  border: 1px solid var(--foreground-color);
+  border-radius: var(--border-radius);
+  padding: calc(var(--padding) * 4);
 }
 
-.dialog__layout {
-  display: flex;
+.dialog {
+  display: inline-flex;
   flex-direction: column;
-  padding: calc(var(--padding) * 4);
   gap: calc(var(--gap) * 4);
   border: 0 solid transparent;
   border-radius: var(--border-radius);
+  padding-bottom: calc(var(--padding) * 4);
+  position: relative;
 }
 
 .dialog__header {
@@ -35,14 +37,28 @@ p {
   color: var(--foreground-muted-color);
 }
 
+.dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--foreground-color);
+}
+
 .dialog__content {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--gap) * 2);
-  padding-bottom: calc(var(--padding) * 4);
 }
 
-.dialog::backdrop {
+.dialog__footer {
+  display: flex;
+  flex-direction: row;
+}
+
+dialog::backdrop {
   background-color: var(--foreground-color);
-  opacity: 0.6;
+  opacity: 0.8;
 }

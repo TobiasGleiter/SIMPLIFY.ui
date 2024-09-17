@@ -17,21 +17,27 @@ class DialogBase extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
-            <link rel="stylesheet" href="ui/dialog.css" />
+    const id = this.getAttribute('id');
 
-            <dialog class="dialog">
-            <div class="dialog__layout">
-                <div class="dialog__header">
-                    <h1><slot name="header"></slot></h1>
-                    <p><slot name="description"></slot></p>
-                </div>
-                <div class="dialog__content">
-                  <slot name="content"></slot>
-                </div>
-            </div>
-            </dialog>
-        `;
+    this.shadowRoot.innerHTML = `
+      <link rel="stylesheet" href="ui/dialog.css" />
+
+      <dialog>
+        <div class="dialog">
+          <div class="dialog__header">
+              <h1><slot name="header"></slot></h1>
+              <p><slot name="description"></slot></p>
+              <button class="dialog__close" aria-label="Close" onclick="${id}.close()" tabindex="0" aria-pressed="false">&times;</button>
+          </div>
+          <div class="dialog__content">
+            <slot name="content"></slot>
+          </div>
+          <div class="dialog__footer">
+            <slot name="footer"></slot>
+          </div>
+        </div>
+      </dialog>
+    `;
   }
 }
 
