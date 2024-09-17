@@ -6,16 +6,30 @@ class LabelBase extends HTMLElement {
 
   connectedCallback() {
     this.render();
+    this.addClickHandler();
   }
 
   render() {
-    const labelFor = this.getAttribute('for') || '';
-
+    const labelFor = this.getAttribute('for');
     this.shadowRoot.innerHTML = `
-    <link rel="stylesheet" href="ui/label.css" />
+      <link rel="stylesheet" href="ui/label.css" />
 
-    <label for="${labelFor}" class="label"><slot></slot></label>
+      <label class="label"><slot></slot></label>
     `;
+
+    this.labelFor = labelFor;
+  }
+
+  addClickHandler() {
+    const input = document.getElementById(this.labelFor);
+    const labelElement = this.shadowRoot.querySelector('label');
+
+    if (input && labelElement) {
+      labelElement.addEventListener('click', () => {
+        input.focus();
+        input.click();
+      });
+    }
   }
 }
 
