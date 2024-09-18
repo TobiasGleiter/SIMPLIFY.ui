@@ -35,7 +35,7 @@ class AccordionBase extends HTMLElement {
 
         <details class="accordion">
           <summary class="accordion__summary"><slot name="summary"></slot></summary>
-          <p class="accordion__content"><slot name="content"></slot></p>
+          <div class="accordion__content"><slot name="content"></slot></div>
         </details>
     `;
   }
