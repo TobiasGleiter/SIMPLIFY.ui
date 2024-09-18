@@ -36,6 +36,16 @@
         </dialog--base>
       </section>
       <section>
+        <dropdown--base>
+          <div slot="trigger">Dropdown</div>
+          <div slot="content">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+          </div>
+        </dropdown--base>
+      </section>
+      <section>
         <accordion--base name="faq">
           <div slot="summary">Is it accessible?</div>
           <div slot="content">Yes!</div>
@@ -87,7 +97,7 @@
       </section>
       <section>
         <div>
-          <input type="radio" id="huey" name="drone" value="huey" />
+          <input type="radio" id="huey" name="drone" value="huey" checked />
           <label--base for="huey" content="Huey">Huey</label--base>
         </div>
         <div>
@@ -111,5 +121,6 @@
     <script src="ui/select.js" type="text/javascript"></script>
     <script src="ui/card.js" type="text/javascript"></script>
     <script src="ui/checkbox.js" type="text/javascript"></script>
+    <script src="ui/dropdown.js" type="text/javascript"></script>
   </body>
 </html>
