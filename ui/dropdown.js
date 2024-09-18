@@ -13,7 +13,9 @@ class Dropdown extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/dropdown.css" />
         <div class="dropdown">
-            <button class="dropdown__trigger-button"><slot name="trigger"></slot></button>
+            <button class="dropdown__trigger-button" tabindex="0" aria-pressed="false" class="button">
+              <slot name="trigger"></slot>
+            </button>
             <div class="dropdown__menu">
                 <slot name="content"></slot>
             </div>
