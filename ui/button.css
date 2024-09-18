@@ -1,5 +1,5 @@
 .button {
-  display: block;
+  display: inline-block;
   box-sizing: border-box;
   font-size: var(--text-base);
   border: 1px solid transparent;
