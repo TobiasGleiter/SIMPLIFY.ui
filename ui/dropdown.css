@@ -14,6 +14,10 @@
   border: 1px solid var(--foreground-color);
   border-radius: var(--border-radius);
   margin-bottom: var(--gap);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .dropdown__trigger-button:hover {

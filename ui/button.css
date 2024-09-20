@@ -9,6 +9,10 @@
   color: var(--foreground-color);
   background-color: var(--background-muted-color);
   transition: 0.1s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .button:hover {
