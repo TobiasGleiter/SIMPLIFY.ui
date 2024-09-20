@@ -10,6 +10,7 @@
     <!-- Requried Styles Below -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/utils.css" />
   </head>
   <body>
     <main>
@@ -24,11 +25,15 @@
         <dialog--base id="profile">
           <div slot="header">Edit Profile</div>
           <div slot="description">Make changes to your profile here. Click save when you're done.</div>
-          <div slot="content">
-            <label for="name" class="label">Name</label>
-            <input class="input" id="name" type="text" placeholder="John Doe" aria-placeholder="John Doe" />
-            <label for="email" class="label">E-Mail</label>
-            <input class="input" id="email" type="text" placeholder="john@doe.com" aria-placeholder="john@doe.com" />
+          <div slot="content" class="flex-col gap-2">
+            <div class="flex-col gap">
+              <label--base for="name" class="label">Name</label--base>
+              <input--base class="input" id="name" type="text" placeholder="John Doe" aria-placeholder="John Doe"></input--base>
+            </div>
+            <div>
+              <label--base for="email" class="label">E-Mail</label--base>
+              <input--base class="input" id="email" type="text" placeholder="john@doe.com" aria-placeholder="john@doe.com"></input--base>
+            </div>
           </div>
           <div slot="footer">
             <button tabindex="0" aria-pressed="false" class="button">Save</button>
@@ -96,10 +101,6 @@
         </card--base>
       </section>
       <section>
-        <div>
-          <input--radio id="huey" name="drone" value="huey" checked></input--radio>
-          <input--radio id="hue" name="drone" value="hue" checked></input--radio>
-        </div>
         <div>
           <input type="radio" id="dewey" name="drone" value="dewey" />
           <label--base for="dewey">Dewey</label--base>

@@ -1,0 +1,21 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap {
+  gap: var(--gap);
+}
+
+.gap-2 {
+  gap: calc(var(--gap) * 2);
+}
+
+.gap-4 {
+  gap: calc(var(--gap) * 4);
+}
