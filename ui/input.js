@@ -15,7 +15,7 @@ class InputBase extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/input.css" />
       
-      <input class="input" id="${inputId}" type="text" placeholder="${placeholder}" aria-placeholder="${placeholder}" />
+      <input class="input__text" id="${inputId}" type="text" placeholder="${placeholder}" aria-placeholder="${placeholder}" />
       `;
   }
 }
@@ -32,12 +32,15 @@ class InputRadio extends HTMLElement {
 
   render() {
     const inputId = this.getAttribute('id');
-    const name = this.getAttribute('name');
     const value = this.getAttribute('value');
 
     this.shadowRoot.innerHTML = `
-
-    <input class="input" type="radio" id="${inputId}" name="${name}" value="${value}" />
+    <link rel="stylesheet" href="ui/input.css" />
+    <label class="container">
+      One
+      <input type="radio" id="${inputId}" value="${value}" />
+      <span class="checkmark"></span>
+    </label>
     `;
   }
 }
