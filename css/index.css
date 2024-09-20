@@ -75,6 +75,9 @@ body {
   gap: var(--gap);
   height: 410px;
 }
+.hero__top {
+  margin-bottom: 40px;
+}
 
 .hero__headline {
   font-size: var(--text-3xl);

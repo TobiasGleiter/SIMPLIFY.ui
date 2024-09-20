@@ -6,15 +6,18 @@ p {
 }
 
 .card {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   padding: calc(var(--padding) * 4);
   padding-bottom: calc(var(--padding) * 8);
+  background-color: var(--background-color);
   font-size: var(--test-base);
   border: 1px solid var(--foreground-color);
   border-radius: var(--border-radius);
   gap: calc(var(--gap) * 4);
   box-shadow: var(--shadow);
+  min-width: 200px;
+  min-height: 200px;
 }
 
 .card__header {
