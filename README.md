@@ -2,4 +2,4 @@
 
 HTML5/CSS/JS
 
-- Styled components
+- Styled components using the shadow dom
