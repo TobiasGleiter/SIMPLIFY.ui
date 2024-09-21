@@ -42,11 +42,20 @@
       </section>
       <section>
         <dropdown--base>
-          <div slot="trigger">Dropdown</div>
-          <div slot="content">
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
+          <div slot="trigger">Menu</div>
+          <div slot="content" class="flex-col gap-2">
+            <div>
+              <p>Tobias Gleiter</p>
+            </div>
+            <divider--base></divider--base>
+            <a href="/profile">Your Profile</a>
+            <divider--base></divider--base>
+            <div class="flex-col gap">
+              <a href="/dashboard">Dashboard</a>
+              <a href="/settinfs">Settings</a>
+            </div>
+            <divider--base></divider--base>
+            <a href="/logout">Logout</a>
           </div>
         </dropdown--base>
       </section>
@@ -125,5 +134,6 @@
     <script src="ui/checkbox.js" type="text/javascript"></script>
     <script src="ui/dropdown.js" type="text/javascript"></script>
     <script src="ui/radio-group.js" type="text/javascript"></script>
+    <script src="ui/divider.js" type="text/javascript"></script>
   </body>
 </html>
