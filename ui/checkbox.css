@@ -1,4 +1,4 @@
-/* Customize the label (the checkbox) */
+/* Refactor Checkbox: https://www.a11ymatters.com/pattern/checkbox/ */
 .checkbox {
   display: block;
   position: relative;
@@ -11,16 +11,16 @@
   user-select: none;
 }
 
-/* Hide the browser's default checkbox */
 .checkbox input {
   position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;

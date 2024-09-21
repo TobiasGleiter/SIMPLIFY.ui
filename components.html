@@ -89,11 +89,15 @@
         <card--base>
           <div slot="header">Edit Profile</div>
           <div slot="description">Make changes to your profile here. Click save when you're done.</div>
-          <div slot="content">
-            <label for="name" class="label">Name</label>
-            <input class="input" id="name" type="text" placeholder="John Doe" aria-placeholder="John Doe" />
-            <label for="email" class="label">E-Mail</label>
-            <input class="input" id="email" type="text" placeholder="john@doe.com" aria-placeholder="john@doe.com" />
+          <div slot="content" class="flex-col gap-2">
+            <div class="flex-col gap">
+              <label--base for="name" class="label">Name</label--base>
+              <input--base class="input" id="name" type="text" placeholder="John Doe" aria-placeholder="John Doe"></input--base>
+            </div>
+            <div class="flex-col gap">
+              <label--base for="email" class="label">E-Mail</label--base>
+              <input--base class="input" id="email" type="text" placeholder="john@doe.com" aria-placeholder="john@doe.com"></input--base>
+            </div>
           </div>
           <div slot="footer">
             <button tabindex="0" aria-pressed="false" class="button">Save</button>
@@ -101,14 +105,11 @@
         </card--base>
       </section>
       <section>
-        <div>
-          <input type="radio" id="dewey" name="drone" value="dewey" />
-          <label--base for="dewey">Dewey</label--base>
-        </div>
-        <div>
-          <input type="radio" id="louie" name="drone" value="louie" />
-          <label--base for="louie">Louie</label--base>
-        </div>
+        <radio-group name="options">
+          <div slot="radio-group" value="option_1">Option 1</div>
+          <div slot="radio-group" value="option_2">Option 2</div>
+          <div slot="radio-group" value="option_3">Option 3</div>
+        </radio-group>
       </section>
       <section>
         <checkbox--base checked="checked">Checkbox</checkbox--base>
@@ -123,5 +124,6 @@
     <script src="ui/card.js" type="text/javascript"></script>
     <script src="ui/checkbox.js" type="text/javascript"></script>
     <script src="ui/dropdown.js" type="text/javascript"></script>
+    <script src="ui/radio-group.js" type="text/javascript"></script>
   </body>
 </html>
