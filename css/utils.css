@@ -26,3 +26,15 @@
 .gap-4 {
   gap: calc(var(--gap) * 4);
 }
+
+.mt {
+  margin-top: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.ml {
+  margin-left: 8px;
+}

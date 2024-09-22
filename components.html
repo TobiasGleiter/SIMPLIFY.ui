@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/utils.css" />
   </head>
   <body>
-    <main>
+    <main style="margin: 24px">
       <section>
         <button--base>Buttons</button--base>
         <button--primary>Buttons</button--primary>
@@ -43,19 +43,23 @@
       <section>
         <dropdown--base>
           <div slot="trigger">Menu</div>
-          <div slot="content" class="flex-col gap-2">
-            <div>
+          <div slot="content" class="flex-col gap-2 mb-2 mt">
+            <div class="ml">
               <p>Tobias Gleiter</p>
             </div>
             <divider--base></divider--base>
-            <a href="/profile">Your Profile</a>
+            <div class="ml">
+              <a href="/profile">Your Profile</a>
+            </div>
             <divider--base></divider--base>
-            <div class="flex-col gap">
+            <div class="flex-col gap ml">
               <a href="/dashboard">Dashboard</a>
               <a href="/settinfs">Settings</a>
             </div>
             <divider--base></divider--base>
-            <a href="/logout">Logout</a>
+            <div class="ml">
+              <a href="/logout">Logout</a>
+            </div>
           </div>
         </dropdown--base>
       </section>
