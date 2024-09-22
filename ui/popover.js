@@ -7,7 +7,6 @@ class PopoverBase extends HTMLElement {
   connectedCallback() {
     this.render();
     this.togglePopover();
-    this.addMouseListeners();
   }
 
   render() {
@@ -32,10 +31,6 @@ class PopoverBase extends HTMLElement {
       popover.classList.toggle('active');
       e.stopPropagation();
     });
-  }
-
-  addMouseListeners() {
-    const popover = this.shadowRoot.querySelector('.popover');
 
     window.addEventListener('click', (e) => {
       if (!popover.contains(e.target)) {
