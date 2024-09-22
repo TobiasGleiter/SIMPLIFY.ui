@@ -1,18 +1,19 @@
 hr {
   margin: 0px;
   padding: 0px;
-  border-bottom: none;
+  height: 1px;
+  border: none;
 }
 
 .divider {
   box-sizing: border-box;
-  border: 1px solid var(--foreground-color);
+  background-color: var(--foreground-color);
   width: 100%;
   opacity: 50%;
 }
 
 .divider--dashed {
-  border: 1px dashed var(--foreground-color);
+  background-color: var(--foreground-color);
   width: 100%;
   opacity: 50%;
 }
