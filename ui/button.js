@@ -17,7 +17,7 @@ class ButtonBase extends HTMLElement {
         aria-pressed="false"
         class="button"
       >
-        <slot>Button</slot>
+        <slot></slot>
       </button>
     `;
   }
