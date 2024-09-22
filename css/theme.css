@@ -8,6 +8,11 @@
   --primary-color: hsla(0, 48%, 62%, 1);
   --secondary-color: hsla(120, 48%, 62%, 1);
 
+  --info-color: var(--foreground-color);
+  --warning-color: orange;
+  --success-color: green;
+  --error-color: red;
+
   --padding: 4px;
   --gap: 4px;
   --border-radius: 4px;

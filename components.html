@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple UI Library</title>
-    <link rel="stylesheet" href="ui/button.css" />
-    <link rel="stylesheet" href="ui/input.css" />
-    <link rel="stylesheet" href="ui/label.css" />
     <!-- Requried Styles Below -->
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/theme.css" />
@@ -123,7 +120,7 @@
             </div>
           </div>
           <div slot="footer">
-            <button tabindex="0" aria-pressed="false" class="button">Save</button>
+            <button--base>Save</button--base>
           </div>
         </card--base>
       </section>
@@ -137,6 +134,15 @@
       <section>
         <checkbox--base checked="checked">Checkbox</checkbox--base>
       </section>
+      <section>
+        <button--base onclick="toast.show('This is an info toast')">Info toast</button--base>
+        <button--base onclick="toast.show('This is a success toast', 'success')">Success toast</button--base>
+        <button--base onclick="toast.show('This is a warning toast', 'warning')">Warning toast</button--base>
+        <button--base onclick="toast.show('This is an error toast', 'error')">Error toast</button--base>
+      </section>
+
+      <!-- Call toasts with toast.show(message, type) -->
+      <toast-provider id="toast"></toast-provider>
     </main>
     <script src="ui/button.js" type="text/javascript" defer></script>
     <script src="ui/dialog.js" type="text/javascript"></script>
@@ -151,5 +157,6 @@
     <script src="ui/divider.js" type="text/javascript"></script>
     <script src="ui/badge.js" type="text/javascript"></script>
     <script src="ui/textarea.js" type="text/javascript"></script>
+    <script src="ui/toast.js" type="text/javascript"></script>
   </body>
 </html>
