@@ -6,7 +6,7 @@ class Dropdown extends HTMLElement {
 
   connectedCallback() {
     this.render();
-    this.appendDropdownItemStyle();
+    //this.appendDropdownItemStyle();
     this.toggleDropdown();
   }
 
@@ -33,12 +33,12 @@ class Dropdown extends HTMLElement {
     });
   }
 
-  appendDropdownItemStyle() {
-    const slot = this.querySelectorAll('[slot="dropdown-item"]');
-    slot.forEach((item) => {
-      item.classList.add('dropdown__menu-item');
-    });
-  }
+  // appendDropdownItemStyle() {
+  //   const slot = this.querySelectorAll('[slot="dropdown-item"]');
+  //   slot.forEach((item) => {
+  //     item.classList.add('dropdown__menu-item');
+  //   });
+  // }
 }
 
 customElements.define('dropdown--base', Dropdown);

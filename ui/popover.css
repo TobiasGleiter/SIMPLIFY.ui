@@ -1,12 +1,11 @@
-.dropdown {
+.popover {
   position: relative;
   display: inline-block;
 }
 
-.dropdown__trigger-button {
+.popover__trigger-button {
   background-color: var(--background-color);
   color: var(--foreground-color);
-  min-width: 160px;
   padding: calc(var(--padding) * 2);
   box-sizing: border-box;
   font-size: var(--test-small);
@@ -19,12 +18,12 @@
   user-select: none;
 }
 
-.dropdown__trigger-button:hover {
+.popover__trigger-button:hover {
   background-color: var(--foreground-color);
   color: var(--background-color);
 }
 
-.dropdown__menu {
+.popover__card {
   display: none;
   position: absolute;
   box-sizing: border-box;
@@ -32,16 +31,12 @@
   border-radius: var(--border-radius);
   background-color: var(--background-color);
   min-width: 160px;
+  max-width: 420px;
   box-shadow: var(--shadow);
   z-index: 1;
+  padding: calc(var(--padding) * 4);
 }
 
-.dropdown__menu-item {
-  height: 10px;
-  width: 100%;
-  background-color: red;
-}
-
-.dropdown.active .dropdown__menu {
+.popover.active .popover__card {
   display: block;
 }
