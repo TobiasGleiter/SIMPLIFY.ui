@@ -27,18 +27,22 @@
         <badge--dark>Dark</badge--dark>
       </section>
       <section>
+        <label--base for="example">Let us know!</label--base>
+        <textarea--base id="example" placeholder="Feedback helps the whole community"></textarea--base>
+      </section>
+      <section>
         <button--base onclick="profile.showModal()">Edit Profile</button--base>
         <dialog--base id="profile">
           <div slot="header">Edit Profile</div>
           <div slot="description">Make changes to your profile here. Click save when you're done.</div>
           <div slot="content" class="flex-col gap-2">
             <div class="flex-col gap">
-              <label--base for="name" class="label">Name</label--base>
-              <input--base class="input" id="name" type="text" placeholder="John Doe" aria-placeholder="John Doe"></input--base>
+              <label--base for="name">Name</label--base>
+              <input--base class="input" id="name" placeholder="John Doe"></input--base>
             </div>
             <div class="flex-col gap">
-              <label--base for="email" class="label">E-Mail</label--base>
-              <input--base class="input" id="email" type="text" placeholder="john@doe.com" aria-placeholder="john@doe.com"></input--base>
+              <label--base for="email">E-Mail</label--base>
+              <input--base id="email" placeholder="john@doe.com"></input--base>
             </div>
           </div>
           <div slot="footer">
@@ -146,5 +150,6 @@
     <script src="ui/radio-group.js" type="text/javascript"></script>
     <script src="ui/divider.js" type="text/javascript"></script>
     <script src="ui/badge.js" type="text/javascript"></script>
+    <script src="ui/textarea.js" type="text/javascript"></script>
   </body>
 </html>

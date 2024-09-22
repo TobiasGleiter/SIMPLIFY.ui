@@ -1,0 +1,10 @@
+.textarea {
+  border: 1px solid var(--foreground-color);
+  border-radius: var(--border-radius);
+  padding: calc(var(--padding) * 2);
+  font-size: var(--text-base);
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 54px;
+}
