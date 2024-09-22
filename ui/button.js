@@ -1,14 +1,24 @@
 class ButtonBase extends HTMLElement {
+  static formAssociated = true;
+
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
+    this.internals = this.attachInternals(); // Access form internals
     this.render();
   }
 
+  connectedCallback() {
+    this.shadowRoot.querySelector('button').addEventListener('click', () => {
+      if (this.getAttribute('type') === 'submit') {
+        this.internals.form.requestSubmit();
+      }
+    });
+  }
+
   render() {
+    const type = this.getAttribute('type') || 'button';
+
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/button.css" />
       
@@ -16,6 +26,7 @@ class ButtonBase extends HTMLElement {
         tabindex="0"
         aria-pressed="false"
         class="button"
+        type="${type}"
       >
         <slot></slot>
       </button>
@@ -27,9 +38,6 @@ class ButtonPrimary extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
     this.render();
   }
 
@@ -42,7 +50,7 @@ class ButtonPrimary extends HTMLElement {
         aria-pressed="false"
         class="button button--primary"
       >
-        <slot>Button</slot>
+        <slot></slot>
       </button>
     `;
   }
@@ -52,9 +60,6 @@ class ButtonSecondary extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
     this.render();
   }
 
@@ -67,7 +72,7 @@ class ButtonSecondary extends HTMLElement {
         aria-pressed="false"
         class="button button--secondary"
       >
-        <slot>Button</slot>
+        <slot></slot>
       </button>
     `;
   }
@@ -77,9 +82,6 @@ class ButtonDark extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
     this.render();
   }
 
@@ -92,7 +94,7 @@ class ButtonDark extends HTMLElement {
         aria-pressed="false"
         class="button button--dark"
       >
-        <slot>Button</slot>
+        <slot></slot>
       </button>
     `;
   }
@@ -102,12 +104,7 @@ class ButtonLight extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.internals = this.attachInternals();
-  }
-
-  connectedCallback() {
     this.render();
-    this.handleFormSubmit();
   }
 
   render() {
@@ -122,18 +119,6 @@ class ButtonLight extends HTMLElement {
         <slot></slot>
       </button>
     `;
-  }
-
-  handleFormSubmit() {
-    const button = this.shadowRoot.querySelector('button');
-
-    button.addEventListener('click', (event) => {
-      event.preventDefault();
-
-      if (this.internals.form) {
-        this.internals.form.requestSubmit();
-      }
-    });
   }
 }
 
