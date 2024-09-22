@@ -1,0 +1,28 @@
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  box-sizing: border-box;
+  font-size: var(--text-xs);
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 4px 16px;
+  transition: 0.1s ease;
+  color: var(--foreground-color);
+  background-color: var(--background-muted-color);
+  cursor: default;
+}
+
+.badge:hover {
+  opacity: 90%;
+}
+
+.badge--dark {
+  color: var(--background-color);
+  background-color: var(--foreground-color);
+}
+
+.badge--light {
+  border: 1px solid var(--foreground-color);
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
