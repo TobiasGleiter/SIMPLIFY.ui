@@ -10,17 +10,18 @@
   padding: calc(var(--padding) * 2);
   display: inline-block;
   position: relative;
-
   cursor: default;
   color: var(--foreground-color);
 }
 
 [role='radio']::before {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  border: 2px solid var(--foreground-color);
+  border: 1px solid var(--foreground-color);
   content: '';
 }
 
@@ -36,7 +37,7 @@
 [role='radio'].focus,
 [role='radio']:hover {
   padding: calc(var(--padding) * 2);
-  border: 1px solid var(--foreground-color);
+  border: 1px solid var(--foreground-muted-color);
   background-color: var(--background-color);
   cursor: pointer;
 }
