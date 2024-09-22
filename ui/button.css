@@ -3,7 +3,7 @@
   box-sizing: border-box;
   font-size: var(--text-base);
   border: 1px solid transparent;
-  border-radius: 9999px;
+  border-radius: var(--border-radius);
   padding: 8px 16px;
   cursor: pointer;
   color: var(--foreground-color);
@@ -21,18 +21,15 @@
 }
 
 .button--primary {
+  border-radius: 9999px;
   color: var(--foreground-color);
   background-color: var(--primary-color);
 }
 
 .button--secondary {
+  border-radius: 9999px;
   color: var(--foreground-color);
   background-color: var(--secondary-color);
-}
-
-.button--light {
-  color: var(--foreground-color);
-  background-color: var(--background-color);
 }
 
 .button--dark {
@@ -42,12 +39,4 @@
 
 .button--dark:hover {
   background-color: var(--primary-color);
-}
-
-.button--large {
-  font-size: var(--text-base);
-}
-
-.button--small {
-  font-size: var(--text-small);
 }
