@@ -11,6 +11,15 @@
   </head>
   <body>
     <main style="margin: 24px" class="flex-col gap-2">
+      <fieldset>
+        <legend>Send us a message</legend>
+        <form id="messageForm">
+          <input--base type="text" id="user_name">Name</input--base>
+          <input--base type="email" id="user_mail">Email</input--base>
+          <textarea--base id="user_message" placeholder="Send a message...">Message</textarea--base>
+          <button type="submit">Submit</button>
+        </form>
+      </fieldset>
       <section class="flex-row gap">
         <button--base>Base</button--base>
         <button--light>Light</button--light>
@@ -30,8 +39,7 @@
         </popover--base>
       </section>
       <section>
-        <label--base for="example">Let us know!</label--base>
-        <textarea--base id="example" placeholder="Feedback helps the whole community"></textarea--base>
+        <textarea--base id="example" placeholder="Feedback helps the whole community">Let us know</textarea--base>
       </section>
       <section>
         <button--base onclick="profile.showModal()">Edit Profile</button--base>
@@ -101,8 +109,7 @@
         </accordion--base>
       </section>
       <section>
-        <label--base for="nickname">Nickname</label--base>
-        <input--base id="nickname" placeholder="Doe" />
+        <input--base id="nickname" placeholder="Doe">Nickname</input--base>
       </section>
       <section>
         <select--base name="gender" placeholder="Choose a sex">
@@ -117,12 +124,10 @@
           <div slot="description">Make changes to your profile here. Click save when you're done.</div>
           <div slot="content" class="flex-col gap-2">
             <div class="flex-col gap">
-              <label--base for="name" class="label">Name</label--base>
-              <input--base id="name" placeholder="John Doe"></input--base>
+              <input--base id="name" placeholder="John Doe">Name</input--base>
             </div>
             <div class="flex-col gap">
-              <label--base for="email" class="label">E-Mail</label--base>
-              <input--base id="email" placeholder="john@doe.com"></input--base>
+              <input--base id="email" placeholder="john@doe.com">E-Mail</input--base>
             </div>
           </div>
           <div slot="footer">
@@ -165,5 +170,19 @@
     <script src="ui/textarea.js" type="text/javascript"></script>
     <script src="ui/toast.js" type="text/javascript"></script>
     <script src="ui/popover.js" type="text/javascript"></script>
+
+    <script>
+      const messageForm = document.getElementById('messageForm');
+
+      messageForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const userName = document.querySelector('input--base#user_name').shadowRoot.querySelector('input').value;
+        const userMail = document.querySelector('input--base#user_mail').shadowRoot.querySelector('input').value;
+        const userMessage = document.querySelector('textarea--base#user_message').shadowRoot.querySelector('textarea').value;
+
+        console.log('Form data:', userName, userMail, userMessage);
+      });
+    </script>
   </body>
 </html>

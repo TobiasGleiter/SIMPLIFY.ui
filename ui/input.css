@@ -1,19 +1,12 @@
 .input__text {
-  width: 100%;
   padding: calc(var(--padding) * 2);
+  width: 100%;
   box-sizing: border-box;
-  font-size: var(--test-small);
   border: 1px solid var(--foreground-color);
   border-radius: var(--border-radius);
+  font-size: var(--text-base);
 }
 
-.container {
-  display: block;
-  position: relative;
-  padding-left: 24px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.input {
+  font-size: var(--text-base);
 }

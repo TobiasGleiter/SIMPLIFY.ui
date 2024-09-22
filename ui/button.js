@@ -102,10 +102,12 @@ class ButtonLight extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this.internals = this.attachInternals();
   }
 
   connectedCallback() {
     this.render();
+    this.handleFormSubmit();
   }
 
   render() {
@@ -117,9 +119,21 @@ class ButtonLight extends HTMLElement {
         aria-pressed="false"
         class="button button--light"
       >
-        <slot>Button</slot>
+        <slot></slot>
       </button>
     `;
+  }
+
+  handleFormSubmit() {
+    const button = this.shadowRoot.querySelector('button');
+
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      if (this.internals.form) {
+        this.internals.form.requestSubmit();
+      }
+    });
   }
 }
 

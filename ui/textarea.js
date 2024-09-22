@@ -2,9 +2,6 @@ class TextareaBase extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
     this.render();
   }
 
@@ -15,7 +12,10 @@ class TextareaBase extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/textarea.css" />
 
-        <textarea id="${id}" class="textarea" placeholder="${placeholder}" autocorrect="false" spellcheck="false"></textarea>
+        <label class="textarea">
+          <slot></slot>
+          <textarea id="${id}" class="textarea__input" placeholder="${placeholder}"></textarea>
+        </label>
     `;
   }
 }
