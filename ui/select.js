@@ -15,9 +15,12 @@ class SelectBase extends HTMLElement {
     this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="ui/select.css" />
 
-    <select name="${name}" class="select">
+    <label>
+      <slot></slot>
+      <select name="${name}" class="select">
         <option value="">${placeholder}</option>
-    </select>
+      </select>
+    </label>
     `;
 
     const selectElement = this.shadowRoot.querySelector('select');

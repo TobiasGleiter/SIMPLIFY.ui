@@ -13,9 +13,15 @@
     <main style="margin: 24px" class="flex-col gap-2">
       <fieldset>
         <legend>Send us a message</legend>
-        <form id="messageForm">
+        <form id="messageForm" class="flex-col gap">
           <input--base type="text" id="user_name">Name</input--base>
           <input--base type="email" id="user_mail">Email</input--base>
+          <select--base name="gender" id="user_sex" placeholder="Choose a sex">
+            Sex
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+          </select--base>
           <textarea--base id="user_message" placeholder="Send a message...">Message</textarea--base>
           <button--base type="submit">Save</button--base>
         </form>
@@ -112,13 +118,6 @@
         <input--base id="nickname" placeholder="Doe">Nickname</input--base>
       </section>
       <section>
-        <select--base name="gender" placeholder="Choose a sex">
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-          <option value="other">Other</option>
-        </select--base>
-      </section>
-      <section>
         <card--base>
           <div slot="header">Edit Profile</div>
           <div slot="description">Make changes to your profile here. Click save when you're done.</div>
@@ -155,34 +154,23 @@
       <!-- Call toasts with toast.show(message, type) -->
       <toast-provider id="toast"></toast-provider>
     </main>
+
     <script src="ui/button.js" type="text/javascript" defer></script>
-    <script src="ui/dialog.js" type="text/javascript"></script>
+    <script src="ui/dialog.js" type="text/javascript" defer></script>
     <script src="ui/input.js" type="text/javascript" defer></script>
-    <script src="ui/label.js" type="text/javascript"></script>
+    <script src="ui/label.js" type="text/javascript" defer></script>
     <script src="ui/accordion.js" type="text/javascript"></script>
     <script src="ui/select.js" type="text/javascript"></script>
     <script src="ui/card.js" type="text/javascript"></script>
     <script src="ui/checkbox.js" type="text/javascript"></script>
     <script src="ui/dropdown.js" type="text/javascript"></script>
-    <script src="ui/radio-group.js" type="text/javascript"></script>
     <script src="ui/divider.js" type="text/javascript"></script>
     <script src="ui/badge.js" type="text/javascript"></script>
     <script src="ui/textarea.js" type="text/javascript"></script>
     <script src="ui/toast.js" type="text/javascript"></script>
     <script src="ui/popover.js" type="text/javascript"></script>
+    <script src="ui/radio-group.js" type="text/javascript"></script>
 
-    <script>
-      const messageForm = document.getElementById('messageForm');
-
-      messageForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const userName = document.querySelector('input--base#user_name').shadowRoot.querySelector('input').value;
-        const userMail = document.querySelector('input--base#user_mail').shadowRoot.querySelector('input').value;
-        const userMessage = document.querySelector('textarea--base#user_message').shadowRoot.querySelector('textarea').value;
-
-        console.log('Form data:', userName, userMail, userMessage);
-      });
-    </script>
+    <script src="js/base.js" type="text/javascript"></script>
   </body>
 </html>

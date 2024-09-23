@@ -4,11 +4,13 @@ class RadioGroupBase extends HTMLElement {
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
+
     const template = document.createElement('template');
     template.innerHTML = `
-        <link rel="stylesheet" href="ui/radio-group.css" />
-        <div class="radio-group" role="radiogroup"></div>
-      `;
+    <link rel="stylesheet" href="ui/radio-group.css" />
+    
+    <div class="radio-group" role="radiogroup"></div>
+    `;
     shadow.appendChild(template.content.cloneNode(true));
 
     this.radioGroup = shadow.querySelector('.radio-group');
