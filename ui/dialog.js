@@ -2,9 +2,6 @@ class DialogBase extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
     this.render();
   }
 
@@ -21,7 +18,6 @@ class DialogBase extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/dialog.css" />
-
       <dialog>
         <div class="dialog">
           <div class="dialog__header">

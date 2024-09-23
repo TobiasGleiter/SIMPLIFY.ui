@@ -8,7 +8,6 @@ class RadioGroupBase extends HTMLElement {
     const template = document.createElement('template');
     template.innerHTML = `
     <link rel="stylesheet" href="ui/radio-group.css" />
-    
     <div class="radio-group" role="radiogroup"></div>
     `;
     shadow.appendChild(template.content.cloneNode(true));
@@ -22,6 +21,8 @@ class RadioGroupBase extends HTMLElement {
       new RadioGroup(this.shadowRoot.querySelector('.radio-group'));
     }
   }
+
+  render() {}
 
   generateRadioButtons() {
     const groupName = this.getAttribute('name') || 'default-group';

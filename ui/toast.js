@@ -3,9 +3,6 @@ class ToastProvider extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.maxToasts = 3;
-  }
-
-  connectedCallback() {
     this.render();
   }
 
@@ -30,7 +27,6 @@ class ToastProvider extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/toast.css" />
-
         <div class="toast-container"></div>
       `;
   }

@@ -2,11 +2,10 @@ class AccordionBase extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this.render();
   }
 
   connectedCallback() {
-    this.render();
-
     const groupName = this.getAttribute('name');
     const detailsElement = this.shadowRoot.querySelector('details');
     detailsElement.addEventListener('toggle', () => {
@@ -18,7 +17,6 @@ class AccordionBase extends HTMLElement {
 
   collapseOtherAccordions(groupName) {
     const allAccordions = document.querySelectorAll(`accordion--base[name="${groupName}"]`);
-
     allAccordions.forEach((accordion) => {
       if (accordion !== this) {
         const details = accordion.shadowRoot.querySelector('details');
@@ -32,7 +30,6 @@ class AccordionBase extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/accordion.css" />
-
         <details class="accordion">
           <summary class="accordion__summary"><slot name="summary"></slot></summary>
           <div class="accordion__content"><slot name="content"></slot></div>

@@ -2,17 +2,16 @@ class PopoverBase extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this.render();
   }
 
   connectedCallback() {
-    this.render();
     this.togglePopover();
   }
 
   render() {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/popover.css" />
-
         <div class="popover">
             <button class="popover__trigger-button" tabindex="0" aria-pressed="false" class="button">
               <slot name="trigger"></slot>

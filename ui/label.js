@@ -2,10 +2,10 @@ class LabelBase extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this.render();
   }
 
   connectedCallback() {
-    this.render();
     this.addClickHandler();
   }
 
@@ -13,7 +13,6 @@ class LabelBase extends HTMLElement {
     const labelFor = this.getAttribute('for');
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/label.css" />
-
       <label class="label"><slot></slot></label>
     `;
 

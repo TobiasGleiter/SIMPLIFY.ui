@@ -2,9 +2,6 @@ class SelectBase extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
     this.render();
   }
 
@@ -14,7 +11,6 @@ class SelectBase extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="ui/select.css" />
-
     <label>
       <slot></slot>
       <select name="${name}" class="select">

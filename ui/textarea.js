@@ -11,7 +11,6 @@ class TextareaBase extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/textarea.css" />
-
         <label class="textarea">
           <slot></slot>
           <textarea id="${id}" class="textarea__input" placeholder="${placeholder}"></textarea>

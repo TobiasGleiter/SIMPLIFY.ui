@@ -3,7 +3,6 @@ class InputBase extends HTMLElement {
 
   constructor() {
     super();
-    // this.internals = this.attachInternals();
     this.attachShadow({ mode: 'open' });
     this.render();
   }
