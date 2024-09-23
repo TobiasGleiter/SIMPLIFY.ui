@@ -39,3 +39,36 @@
     --card-background-color: hsl(00, 0%, 20%);
   }
 } */
+
+.not-supported {
+  display: none;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 5px;
+}
+
+.not-supported.visible {
+  display: block;
+}
+
+.error-message {
+  display: none;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 5px;
+}
+
+[invalid] ~ .error-message {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+label + button[type='submit'] {
+  margin-top: 15px;
+}

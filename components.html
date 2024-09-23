@@ -13,8 +13,8 @@
     <main style="margin: 24px" class="flex-col gap-2">
       <fieldset>
         <legend>Send us a message</legend>
-        <form id="messageForm" class="flex-col gap">
-          <input--base type="text" id="user_name">Name</input--base>
+        <form id="messageForm" class="flex-col gap" novalidate>
+          <input--base required type="text" id="user_name">Name</input--base>
           <input--base type="email" id="user_mail">Email</input--base>
           <select--base name="gender" id="user_sex" placeholder="Choose a sex">
             Sex
