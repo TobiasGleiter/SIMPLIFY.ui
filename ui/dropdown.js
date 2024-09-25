@@ -13,7 +13,12 @@ class Dropdown extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/dropdown.css" />
         <div class="dropdown">
-            <button class="dropdown__trigger-button" tabindex="0" aria-pressed="false" class="button">
+            <button 
+              class="button dropdown__trigger-button" 
+              tabindex="0" 
+              aria-expanded="false" 
+              aria-haspopup="true"
+              >
               <slot name="trigger"></slot>
             </button>
             <div class="dropdown__menu">
@@ -47,12 +52,13 @@ class DropdownLink extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.render();
+    this.attachEvents();
   }
 
   render() {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/dropdown.css" />
-      <a class="dropdown__link"><slot></slot></a>
+      <a class="dropdown__link" role="button" tabindex="0"><slot></slot></a>
     `;
   }
 
