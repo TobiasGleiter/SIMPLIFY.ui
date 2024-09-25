@@ -7,8 +7,7 @@
   display: inline-block;
   background-color: var(--background-color);
   color: var(--foreground-color);
-  min-width: 160px;
-  padding: calc(var(--padding) * 2);
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 4);
   font-size: var(--test-small);
   border: 1px solid var(--foreground-color);
   border-radius: var(--border-radius);
