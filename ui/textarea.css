@@ -3,11 +3,12 @@
   border-radius: var(--border-radius);
   padding: calc(var(--padding) * 2);
   font-size: var(--text-base);
-  width: 100%;
   box-sizing: border-box;
   min-width: 100%;
   max-width: 100%;
   min-height: 54px;
+  resize: vertical;
+  overflow: auto;
 }
 
 .textarea {
