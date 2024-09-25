@@ -6,7 +6,3 @@
   border-radius: var(--border-radius);
   font-size: var(--text-base);
 }
-
-.input {
-  font-size: var(--text-base);
-}

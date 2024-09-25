@@ -13,17 +13,11 @@
     <main style="margin: 24px" class="flex-col gap-2">
       <fieldset>
         <legend>Send us a message</legend>
-        <form id="messageForm" class="flex-col gap" novalidate>
-          <input--base required type="text" id="user_name">Name</input--base>
-          <input--base type="email" id="user_mail">Email</input--base>
-          <select--base name="gender" id="user_sex" placeholder="Choose a sex">
-            Sex
-            <option value="female">Female</option>
-            <option value="male">Male</option>
-            <option value="other">Other</option>
-          </select--base>
-          <textarea--base id="user_message" placeholder="Send a message...">Message</textarea--base>
-          <button--base type="submit">Save</button--base>
+        <form action="/user/signup" method="POST" novalidate class="flex-col gap-2">
+          <input--base type="text" name="user_name" placeholder="John Doe">Name</input--base>
+          <input--base type="email" name="user_email">Email</input--base>
+          <textarea--base placeholder="Send a message...">Message</textarea--base>
+          <button--base type="submit">Submit</button--base>
         </form>
       </fieldset>
       <section class="flex-row gap">
@@ -46,6 +40,14 @@
       </section>
       <section>
         <textarea--base id="example" placeholder="Feedback helps the whole community">Let us know</textarea--base>
+      </section>
+      <section>
+        <select--base name="gender" id="user_sex" placeholder="Choose a sex">
+          Sex
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select--base>
       </section>
       <section>
         <button--base onclick="profile.showModal()">Edit Profile</button--base>

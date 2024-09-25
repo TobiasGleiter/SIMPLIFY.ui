@@ -6,31 +6,49 @@ class InputBase extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this.internals = this.attachInternals();
     this.render();
   }
 
   render() {
-    const inputId = this.getAttribute('id') ? `id="${this.getAttribute('id')}"` : '';
-    const type = this.getAttribute('type') || 'text';
-    const placeholder = this.getAttribute('placeholder') ? `placeholder="${this.getAttribute('placeholder')}"` : '';
-
-    const required = this.hasAttribute('required') ? 'required' : '';
-    const minLength = this.getAttribute('minlength') ? `minlength="${this.getAttribute('minlength')}"` : '';
-    const maxLength = this.getAttribute('maxlength') ? `maxlength="${this.getAttribute('maxlength')}"` : '';
-    const pattern = this.getAttribute('pattern') ? `pattern="${this.getAttribute('pattern')}"` : '';
-
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/input.css" />
       <label class="input">
         <slot></slot>
-        <input class="input__text" id="${inputId}" type="${type}" ${placeholder} ${required} ${minLength} ${maxLength} ${pattern} />
-        <span class="error-message">Invalid input</span>
+        <input class="input__text" />
       </label>`;
   }
 
-  validate() {
-    const input = this.shadowRoot.querySelector('input');
-    return input.checkValidity();
+  connectedCallback() {
+    this.input = this.shadowRoot.querySelector('input');
+    ['type', 'name', 'value', 'placeholder'].forEach((attr) => {
+      const attrValue = attr === 'required' ? this.hasAttribute(attr) : this.getAttribute(attr);
+
+      if (attrValue !== null && attrValue !== undefined) {
+        this.input[attr] = attrValue;
+      }
+    });
+  }
+
+  get value() {
+    return this.input.value;
+  }
+
+  set value(value) {
+    this.input.value = value;
+    this.internals.setFormValue(value);
+  }
+
+  get form() {
+    return this.internals.form;
+  }
+
+  get name() {
+    return this.getAttribute('name');
+  }
+
+  get type() {
+    return this.localName;
   }
 }
 
