@@ -22,13 +22,11 @@
 }
 
 .button--primary {
-  border-radius: 9999px;
   color: var(--foreground-color);
   background-color: var(--primary-color);
 }
 
 .button--secondary {
-  border-radius: 9999px;
   color: var(--foreground-color);
   background-color: var(--secondary-color);
 }

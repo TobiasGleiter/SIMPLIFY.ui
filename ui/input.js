@@ -39,10 +39,6 @@ class InputBase extends HTMLElement {
     this.internals.setFormValue(value);
   }
 
-  get form() {
-    return this.internals.form;
-  }
-
   get name() {
     return this.getAttribute('name');
   }
