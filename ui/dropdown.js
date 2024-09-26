@@ -31,8 +31,13 @@ class Dropdown extends HTMLElement {
   toggleDropdown() {
     const button = this.shadowRoot.querySelector('button');
     const dropdown = this.shadowRoot.querySelector('.dropdown');
+
     button.addEventListener('click', () => {
       dropdown.classList.toggle('active');
+    });
+
+    dropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
     });
 
     window.addEventListener('click', (e) => {
@@ -41,8 +46,10 @@ class Dropdown extends HTMLElement {
       }
     });
 
-    dropdown.addEventListener('click', (e) => {
-      e.stopPropagation();
+    window.addEventListener('keydown', (e) => {
+      if (e.key == 'Escape') {
+        dropdown.classList.remove('active');
+      }
     });
   }
 }
