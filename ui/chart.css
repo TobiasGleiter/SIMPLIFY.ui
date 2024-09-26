@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  max-width: 100%; /* Responsive */
+  margin: 0 auto; /* Center alignment */
+}
+
+.chart {
+  width: 100%; /* Responsive */
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #ccc;
+  background-color: #fff;
+}

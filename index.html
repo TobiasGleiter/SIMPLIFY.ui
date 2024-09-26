@@ -24,51 +24,47 @@
         <section class="hero">
           <div class="hero__top">
             <h1 class="hero__headline">Build your component library</h1>
-            <p class="hero__description">Beautifully designed components that you can copy and paste into your apps.</p>
+            <p class="hero__description">Beautifully designed leightweight web-components that you can copy and paste into your apps.</p>
           </div>
           <div>
             <button--secondary>Get started</button--secondary>
             <button--base>Components</button--base>
           </div>
         </section>
-        <section class="flex-row flex-warp gap-2">
+        <section class="card-grid gap-2">
           <card--base>
             <div slot="header">Buttons</div>
             <div slot="description">Prestyled and accessible buttons.</div>
-            <div slot="content" class="flex-col items-center gap">
+            <div slot="content" class="flex-col gap">
               <button--base>Base</button--base>
+              <button--light>Light</button--light>
+              <button--dark>Dark</button--dark>
               <button--primary>Primary</button--primary>
               <button--secondary>Secondary</button--secondary>
-              <button--dark>Dark</button--dark>
             </div>
           </card--base>
           <card--base>
-            <div slot="header">Edit Profile</div>
-            <div slot="description">Make changes to your profile here. Click save when you're done.</div>
-            <div slot="content" class="flex-col gap-2">
-              <div class="flex-col gap">
-                <label--base for="name" class="label">Name</label--base>
-                <input--base class="input" id="name" type="text" placeholder="John Doe" aria-placeholder="John Doe"></input--base>
-              </div>
-              <div class="flex-col gap">
-                <label--base for="email" class="label">E-Mail</label--base>
-                <input--base class="input" id="email" type="text" placeholder="john@doe.com" aria-placeholder="john@doe.com"></input--base>
-              </div>
-            </div>
-            <div slot="footer">
-              <button--base tabindex="0" aria-pressed="false" class="button">Save</button--base>
+            <div slot="header">Input</div>
+            <div slot="description">Prestyled and accessible input with label.</div>
+            <div slot="content">
+              <input--base id="name" placeholder="John Doe">Name</input--base>
             </div>
           </card--base>
           <card--base>
             <div slot="header">Dropdown</div>
             <div slot="description">Prestyled and accessible dropdown menu.</div>
-            <div slot="content" class="flex-col items-center">
+            <div slot="content" class="flex-col">
               <dropdown--base>
-                <div slot="trigger">Dropdown</div>
-                <div slot="content">
-                  <div>Item 1</div>
-                  <div>Item 2</div>
-                  <div>Item 3</div>
+                <div slot="trigger">Menu</div>
+                <div slot="content" class="flex-col mb-2 mt">
+                  <dropdown__item--base>John Doe</dropdown__item--base>
+                  <divider--base></divider--base>
+                  <dropdown__link--base href="/profile">Your profile</dropdown__link--base>
+                  <divider--base></divider--base>
+                  <dropdown__link--base href="/dashboard">Dashboard</dropdown__link--base>
+                  <dropdown__link--base href="/settings">Settings</dropdown__link--base>
+                  <divider--base></divider--base>
+                  <dropdown__link--base href="/logout">Logout</dropdown__link--base>
                 </div>
               </dropdown--base>
             </div>
@@ -76,13 +72,94 @@
           <card--base>
             <div slot="header">Checkbox</div>
             <div slot="description">Prestyled and accessible checkbox.</div>
-            <div slot="content" class="flex-col items-center">
+            <div slot="content" class="flex-col">
               <checkbox--base checked="checked">I agree all terms & conditions</checkbox--base>
+            </div>
+          </card--base>
+          <card--base>
+            <div slot="header">Accordion</div>
+            <div slot="description">Prestyled and accessible accordion.</div>
+            <div slot="content">
+              <accordion--base name="faq">
+                <div slot="summary">Is it accessible?</div>
+                <div slot="content">Yes!</div>
+              </accordion--base>
+              <accordion--base name="faq">
+                <div slot="summary">Is it styled?</div>
+                <div slot="content">Yes!</div>
+              </accordion--base>
+              <accordion--base name="faq">
+                <div slot="summary">Is it animated?</div>
+                <div slot="content">Yes!</div>
+              </accordion--base>
+            </div>
+          </card--base>
+          <card--base>
+            <div slot="header">Radio-Buttons</div>
+            <div slot="description">Radio buttons.</div>
+            <div slot="content">
+              <radio-group name="options">
+                <div slot="radio-group" value="option_1">Option 1</div>
+                <div slot="radio-group" value="option_2">Option 2</div>
+                <div slot="radio-group" value="option_3">Option 3</div>
+              </radio-group>
+            </div>
+          </card--base>
+          <card--base>
+            <div slot="header">Badges</div>
+            <div slot="description">Prestyled and accessible badges.</div>
+            <div slot="content" class="flex-col gap-2">
+              <badge--base>Badge Base</badge--base>
+              <badge--light>Badge Light</badge--light>
+              <badge--dark>Badge Dark</badge--dark>
+            </div>
+          </card--base>
+          <card--base>
+            <div slot="header">Modal</div>
+            <div slot="description">Simple lightweight modal</div>
+            <div slot="content">
+              <button--base onclick="profile.showModal()">Edit Profile</button--base>
+              <dialog--base id="profile">
+                <div slot="header">Edit Profile</div>
+                <div slot="description">Make changes to your profile here. Click save when you're done.</div>
+                <div slot="content" class="flex-col gap-2">
+                  <div class="flex-col gap">
+                    <input--base name="user_name" placeholder="John Doe">Name</input--base>
+                  </div>
+                  <div class="flex-col gap">
+                    <input--base name="email" placeholder="john@doe.com">Email</input--base>
+                  </div>
+                </div>
+                <div slot="footer">
+                  <button--base>Save</button--base>
+                </div>
+              </dialog--base>
+            </div>
+          </card--base>
+          <card--base>
+            <div slot="header">Popover</div>
+            <div slot="description">Customizable popover</div>
+            <div slot="content">
+              <popover--base>
+                <div slot="trigger">Popover</div>
+                <div slot="content">Your customizable popover</div>
+              </popover--base>
+            </div>
+          </card--base>
+          <card--base>
+            <div slot="header">Toast</div>
+            <div slot="description">Simple toasts</div>
+            <div slot="content" class="flex-col gap">
+              <button--base onclick="toast.show('This is an info toast')">Info toast</button--base>
+              <button--base onclick="toast.show('This is a success toast', 'success')">Success toast</button--base>
+              <button--base onclick="toast.show('This is a warning toast', 'warning')">Warning toast</button--base>
+              <button--base onclick="toast.show('This is an error toast', 'error')">Error toast</button--base>
+              <toast-provider id="toast"></toast-provider>
             </div>
           </card--base>
         </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">Hello!!!</footer>
     </div>
     <script src="ui/button.js" type="text/javascript" defer></script>
     <script src="ui/card.js" type="text/javascript"></script>
@@ -91,5 +168,11 @@
     <script src="ui/dropdown.js" type="text/javascript"></script>
     <script src="ui/checkbox.js" type="text/javascript"></script>
     <script src="ui/dialog.js" type="text/javascript"></script>
+    <script src="ui/divider.js" type="text/javascript"></script>
+    <script src="ui/accordion.js" type="text/javascript"></script>
+    <script src="ui/radio-group.js" type="text/javascript"></script>
+    <script src="ui/badge.js" type="text/javascript"></script>
+    <script src="ui/popover.js" type="text/javascript"></script>
+    <script src="ui/toast.js" type="text/javascript"></script>
   </body>
 </html>
