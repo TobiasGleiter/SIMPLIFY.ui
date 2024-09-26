@@ -12,6 +12,7 @@
   border: 1px solid var(--foreground-color);
   border-radius: var(--border-radius);
   margin-bottom: var(--gap);
+  cursor: pointer;
   transition: 0.1s ease;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -43,6 +44,7 @@
   text-decoration: none;
   padding: calc(var(--padding) * 2);
   transition: 0.1s ease;
+  cursor: pointer;
 }
 
 .dropdown__link:hover {
