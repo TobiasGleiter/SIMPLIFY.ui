@@ -6,3 +6,8 @@
   border-radius: var(--border-radius);
   font-size: var(--text-base);
 }
+
+.input input:disabled {
+  border: 1px solid var(--foreground-muted-color);
+  cursor: not-allowed;
+}

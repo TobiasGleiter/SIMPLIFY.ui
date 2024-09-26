@@ -21,13 +21,17 @@ class InputBase extends HTMLElement {
 
   connectedCallback() {
     this.input = this.shadowRoot.querySelector('input');
-    ['type', 'name', 'value', 'placeholder'].forEach((attr) => {
+    ['type', 'name', 'value', 'placeholder', 'disabled'].forEach((attr) => {
       const attrValue = attr === 'required' ? this.hasAttribute(attr) : this.getAttribute(attr);
 
       if (attrValue !== null && attrValue !== undefined) {
         this.input[attr] = attrValue;
       }
     });
+
+    if (this.hasAttribute('disabled')) {
+      this.input.disabled = true;
+    }
   }
 
   get value() {
