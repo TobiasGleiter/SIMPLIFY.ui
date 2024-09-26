@@ -46,8 +46,10 @@
           <card--base>
             <div slot="header">Input</div>
             <div slot="description">Prestyled and accessible input with label.</div>
-            <div slot="content">
+            <div slot="content" class="flex-col gap-2">
               <input--base id="name" placeholder="John Doe">Name</input--base>
+              <input--base id="email" placeholder="john@doe.com">Email</input--base>
+              <textarea--base placeholder="Write us a message">Message</textarea--base>
             </div>
           </card--base>
           <card--base>
@@ -174,5 +176,6 @@
     <script src="ui/badge.js" type="text/javascript"></script>
     <script src="ui/popover.js" type="text/javascript"></script>
     <script src="ui/toast.js" type="text/javascript"></script>
+    <script src="ui/textarea.js" type="text/javascript"></script>
   </body>
 </html>
