@@ -14,3 +14,8 @@
 .textarea {
   font-size: var(--text-base);
 }
+
+.textarea textarea:disabled {
+  cursor: not-allowed;
+  color: var(--foreground-muted-color);
+}
