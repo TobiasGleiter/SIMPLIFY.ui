@@ -17,7 +17,7 @@
   height: 40px;
   box-sizing: border-box;
   border: 1px solid var(--border);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
   background-color: var(--background);
 }
 

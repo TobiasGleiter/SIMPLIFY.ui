@@ -12,11 +12,11 @@
     <div class="body__wrapper">
       <header class="header">
         <div class="header__container">
-          <div class="logo">
+          <div class="logo" onclick="window.open('/index.html', '_self')">
             <img src="img/logo.svg" width="32px" height="32px" class="logo__img" />
             <span class="logo__text">ui.tobiasgleiter.de</span>
           </div>
-          <div></div>
+          <div><button--base onclick="window.open('/mission', '_self')">Our Mission</button--base></div>
         </div>
       </header>
       <main class="container">
@@ -27,14 +27,14 @@
             <p class="hero__description">Beautifully designed leightweight web-components that you can copy and paste into your apps.</p>
           </div>
           <div>
-            <button--base secondary>Get started</button--base>
-            <button--base outline>Components</button--base>
+            <button--base secondary onclick="window.open('/docs', '_self')">Get started</button--base>
+            <button--base outline onclick="window.open('/docs/components', '_self')">Components</button--base>
           </div>
         </section>
         <section class="card-grid gap-2">
           <card--base>
             <div slot="header">Buttons</div>
-            <div slot="description">Prestyled and accessible buttons.</div>
+            <div slot="description">Six different pre-styled and accessible buttons.</div>
             <div slot="content" class="flex-col gap">
               <button--base>Base</button--base>
               <button--base secondary>Secondary</button--base>
@@ -168,7 +168,13 @@
           </card--base>
         </section>
       </main>
-      <footer class="footer">Hello!!!</footer>
+      <footer class="footer">
+        <div class="footer__container">
+          <span>&copy2024 ui.tobiasgleiter.de</span>
+          <button--base link>Privacy.</button--base>
+          <button--base link>Sitemap.</button--base>
+        </div>
+      </footer>
     </div>
     <script src="ui/button.js" type="text/javascript" defer></script>
     <script src="ui/card.js" type="text/javascript"></script>

@@ -26,27 +26,13 @@
 
   --shadow-color: rgba(0, 0, 0, 0.3);
   --shadow: 0 1px 2px 0 var(--shadow-color);
-
   --ring-offset-shadow: 0 0 transparent;
   --ring-shadow: 0 0 transparent;
 
-  --foreground-color: hsla(0, 0%, 20%, 1);
-  --foreground-muted-color: hsla(0, 0%, 60%, 1);
-  --background-color: hsla(0, 0%, 100%, 1);
-  --background-muted-color: hsla(0, 46%, 95%, 1);
-
-  --primary-color: hsla(0, 48%, 62%, 1);
-  --secondary-color: hsla(120, 48%, 62%, 1);
-
-  --info-color: var(--foreground-color);
+  --info-color: var(--foreground);
   --warning-color: orange;
   --success-color: green;
   --error-color: red;
-
-  --border-radius: 4px;
-
-  /* --shadow: 0 5px 15px 0 #00000026;
-  --shadow-active: 0 5px 5px 0 #00000026; */
 
   --text-3xl: 48px;
   --text-2xl: 28px;

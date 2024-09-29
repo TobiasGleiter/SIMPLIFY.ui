@@ -7,8 +7,8 @@ p {
 }
 
 dialog {
-  border: 1px solid var(--foreground-color);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--foreground);
+  border-radius: var(--radius);
   padding: calc(var(--padding) * 4);
   padding-bottom: calc(var(--padding) * 8);
 }
@@ -18,7 +18,7 @@ dialog {
   flex-direction: column;
   gap: calc(var(--gap) * 4);
   border: 0 solid transparent;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
   position: relative;
 }
 
@@ -34,7 +34,7 @@ dialog {
 
 .dialog__header p {
   font-size: var(--text-small);
-  color: var(--foreground-muted-color);
+  color: var(--muted-foreground);
 }
 
 .dialog__close {
@@ -45,7 +45,7 @@ dialog {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--foreground-color);
+  color: var(--foreground);
 }
 
 .dialog__content {
@@ -59,6 +59,6 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: var(--foreground-color);
+  background-color: var(--foreground);
   opacity: 0.8;
 }
