@@ -13,9 +13,7 @@ class PopoverBase extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/popover.css" />
         <div class="popover">
-            <button class="popover__trigger-button" tabindex="0" aria-pressed="false" class="button">
-              <slot name="trigger"></slot>
-            </button>
+            <slot name="trigger"></slot>
             <div class="popover__card">
                 <slot name="content"></slot>
             </div>
@@ -24,7 +22,7 @@ class PopoverBase extends HTMLElement {
   }
 
   togglePopover() {
-    const button = this.shadowRoot.querySelector('button');
+    const button = this.shadowRoot.querySelector('slot[name="trigger"]');
     const popover = this.shadowRoot.querySelector('.popover');
     button.addEventListener('click', (e) => {
       popover.classList.toggle('active');
@@ -39,6 +37,12 @@ class PopoverBase extends HTMLElement {
 
     popover.addEventListener('click', (e) => {
       e.stopPropagation();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key == 'Escape') {
+        popover.classList.remove('active');
+      }
     });
   }
 }

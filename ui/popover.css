@@ -3,33 +3,16 @@
   display: inline-block;
 }
 
-.popover__trigger-button {
-  background-color: var(--background-color);
-  color: var(--foreground-color);
-  padding: calc(var(--padding) * 2);
-  box-sizing: border-box;
-  font-size: var(--test-small);
-  border: 1px solid var(--foreground-color);
-  border-radius: var(--border-radius);
-  margin-bottom: var(--gap);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.popover__trigger-button:hover {
-  background-color: var(--foreground-color);
-  color: var(--background-color);
-}
-
 .popover__card {
   display: none;
   position: absolute;
   box-sizing: border-box;
-  border: 1px solid var(--foreground-color);
-  border-radius: var(--border-radius);
-  background-color: var(--background-color);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  font-size: var(--text-small);
+  font-weight: 500;
   min-width: 160px;
   max-width: 420px;
   box-shadow: var(--shadow);
