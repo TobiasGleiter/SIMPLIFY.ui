@@ -1,47 +1,71 @@
 .button {
   display: inline-flex;
-  width: fit-content;
-  box-sizing: border-box;
-  font-size: var(--text-base);
-  border: 1px solid transparent;
-  border-radius: var(--border-radius);
-  padding: 8px 16px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border: 0px solid transparent;
+  border-radius: calc(var(--radius) * 1);
+  font-size: var(--text-small);
+  font-weight: 500;
+
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 4);
   cursor: pointer;
-  color: var(--foreground-color);
-  background-color: var(--background-muted-color);
-  transition: 0.1s ease;
+  color: var(--primary-foreground);
+  background-color: var(--primary);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-.button:hover {
-  color: var(--background-color);
-  background-color: var(--foreground-color);
+.button:disabled {
+  pointer-events: none;
+  opacity: 50%;
 }
 
-.button--primary {
-  color: var(--foreground-color);
-  background-color: var(--primary-color);
+.button:hover {
+  opacity: 85%;
+}
+
+.button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .button--secondary {
-  color: var(--foreground-color);
-  background-color: var(--secondary-color);
+  color: var(--secondary-foreground);
+  background-color: var(--secondary);
 }
 
-.button--light {
-  border: 1px solid var(--foreground-color);
-  color: var(--foreground-color);
-  background-color: var(--background-color);
+.button--outline {
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
-.button--dark {
-  color: var(--background-color);
-  background-color: var(--foreground-color);
+.button--outline:hover {
+  color: var(--accent-foreground);
+  background-color: var(--accent);
 }
 
-.button--dark:hover {
-  background-color: var(--primary-color);
+.button--ghost {
+  border: 0px solid transparent;
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.button--ghost:hover {
+  color: var(--accent-foreground);
+  background-color: var(--accent);
+}
+
+.button--link {
+  color: var(--primary);
+  background-color: transparent;
+  text-underline-offset: 4px;
+}
+
+.button--link:hover {
+  text-decoration: underline;
 }

@@ -9,16 +9,48 @@ class ButtonBase extends HTMLElement {
   }
 
   connectedCallback() {
-    this.shadowRoot.querySelector('button').addEventListener('click', () => {
+    this.button = this.shadowRoot.querySelector('button');
+    this.input = this.shadowRoot.querySelector('input');
+    ['type', 'name', 'disabled'].forEach((attr) => {
+      const attrValue = attr === 'required' ? this.hasAttribute(attr) : this.getAttribute(attr);
+
+      if (attrValue !== null && attrValue !== undefined) {
+        this.button[attr] = attrValue;
+      }
+    });
+
+    this.button.addEventListener('click', () => {
       if (this.getAttribute('type') === 'submit') {
         this.internals.form.requestSubmit();
       }
     });
+
+    if (this.hasAttribute('primary')) {
+      this.button.classList.add('button--primary');
+    }
+
+    if (this.hasAttribute('secondary')) {
+      this.button.classList.add('button--secondary');
+    }
+
+    if (this.hasAttribute('outline')) {
+      this.button.classList.add('button--outline');
+    }
+
+    if (this.hasAttribute('ghost')) {
+      this.button.classList.add('button--ghost');
+    }
+
+    if (this.hasAttribute('link')) {
+      this.button.classList.add('button--link');
+    }
+
+    if (this.hasAttribute('disabled')) {
+      this.button.disabled = true;
+    }
   }
 
   render() {
-    const type = this.getAttribute('type') || 'button';
-
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/button.css" />
       
@@ -26,7 +58,6 @@ class ButtonBase extends HTMLElement {
         tabindex="0"
         aria-pressed="false"
         class="button"
-        type="${type}"
       >
         <slot></slot>
       </button>
