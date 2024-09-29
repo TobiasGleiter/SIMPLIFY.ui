@@ -75,7 +75,7 @@ class ButtonPrimary extends HTMLElement {
       <button
         tabindex="0"
         aria-pressed="false"
-        class="button button--primary"
+        class="button"
       >
         <slot></slot>
       </button>
