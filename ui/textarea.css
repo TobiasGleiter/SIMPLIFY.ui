@@ -1,7 +1,19 @@
+.textarea {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-base);
+  gap: var(--gap);
+}
+
+.textarea textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .textarea__input {
-  border: 1px solid var(--foreground-color);
-  border-radius: var(--border-radius);
-  padding: calc(var(--padding) * 2);
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
   font-size: var(--text-base);
   box-sizing: border-box;
   min-width: 100%;
@@ -11,11 +23,7 @@
   overflow: auto;
 }
 
-.textarea {
-  font-size: var(--text-base);
-}
-
 .textarea textarea:disabled {
   cursor: not-allowed;
-  color: var(--foreground-muted-color);
+  opacity: 50%;
 }

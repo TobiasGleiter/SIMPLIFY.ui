@@ -19,7 +19,10 @@
   --border: 214.3 31.8% 91.4%;
   --input: hsl(214.3 31.8% 91.4%);
   --ring: 221.2 83.2% 53.3%;
+
   --radius: 4px;
+  --gap: 4px;
+  --padding: 4px;
 
   --foreground-color: hsla(0, 0%, 20%, 1);
   --foreground-muted-color: hsla(0, 0%, 60%, 1);
@@ -34,8 +37,6 @@
   --success-color: green;
   --error-color: red;
 
-  --padding: 4px;
-  --gap: 4px;
   --border-radius: 4px;
 
   --shadow: 0 5px 15px 0 #00000026;
