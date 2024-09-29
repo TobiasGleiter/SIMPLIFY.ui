@@ -9,6 +9,7 @@
   flex: 1 1 0%;
   align-items: center;
   cursor: pointer;
+  font-size: var(--text-small);
   font-weight: 500;
   padding: var(--padding);
 }
