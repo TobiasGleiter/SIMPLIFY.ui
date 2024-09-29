@@ -10,6 +10,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background-color: var(--popover);
+  margin-top: var(--padding);
   color: var(--popover-foreground);
   font-size: var(--text-small);
   font-weight: 500;

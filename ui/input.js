@@ -10,15 +10,6 @@ class InputBase extends HTMLElement {
     this.render();
   }
 
-  render() {
-    this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="ui/input.css" />
-      <label class="input">
-        <slot></slot>
-        <input class="input__text" />
-      </label>`;
-  }
-
   connectedCallback() {
     this.input = this.shadowRoot.querySelector('input');
     ['type', 'name', 'value', 'placeholder', 'disabled'].forEach((attr) => {
@@ -32,6 +23,15 @@ class InputBase extends HTMLElement {
     if (this.hasAttribute('disabled')) {
       this.input.disabled = true;
     }
+  }
+
+  render() {
+    this.shadowRoot.innerHTML = `
+      <link rel="stylesheet" href="ui/input.css" />
+      <label class="input">
+        <slot></slot>
+        <input class="input__text" />
+      </label>`;
   }
 
   get value() {
