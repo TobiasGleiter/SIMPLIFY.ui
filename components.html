@@ -133,6 +133,12 @@
         <button--base onclick="toast.show('This is a warning toast', 'warning')">Warning toast</button--base>
         <button--base onclick="toast.show('This is an error toast', 'error')">Error toast</button--base>
       </section>
+      <section>
+        <hover--base>
+          <div slot="trigger"><button--base>Hover everthing!</button--base></div>
+          <div slot="content">World!</div>
+        </hover--base>
+      </section>
 
       <bar-chart></bar-chart>
       <!-- Call toasts with toast.show(message, type) -->
@@ -154,6 +160,7 @@
     <script src="ui/popover.js" type="text/javascript"></script>
     <script src="ui/radio-group.js" type="text/javascript"></script>
     <script src="ui/chart.js" type="text/javascript"></script>
+    <script src="ui/hover.js" type="text/javascript"></script>
 
     <script src="js/base.js" type="text/javascript"></script>
   </body>

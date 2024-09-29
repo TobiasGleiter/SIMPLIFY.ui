@@ -1,0 +1,26 @@
+.hover {
+  position: relative;
+  display: inline-block;
+}
+
+.hover__card {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--popover);
+  margin-top: var(--padding);
+  color: var(--popover-foreground);
+  font-size: var(--text-small);
+  font-weight: 500;
+  min-width: 160px;
+  max-width: 420px;
+  box-shadow: var(--shadow);
+  z-index: 99;
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
+}
+
+.hover.active .hover__card {
+  display: block;
+}
