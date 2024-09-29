@@ -47,15 +47,6 @@ class Dropdown extends HTMLElement {
   }
 }
 
-{
-  /* <button 
-class="button dropdown__trigger-button" 
-tabindex="0" 
-aria-expanded="false" 
-aria-haspopup="true"
-> */
-}
-
 class DropdownLink extends HTMLElement {
   constructor() {
     super();
