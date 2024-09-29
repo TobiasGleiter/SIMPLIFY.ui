@@ -13,14 +13,7 @@ class Dropdown extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/dropdown.css" />
         <div class="dropdown">
-            <button 
-              class="button dropdown__trigger-button" 
-              tabindex="0" 
-              aria-expanded="false" 
-              aria-haspopup="true"
-              >
-              <slot name="trigger"></slot>
-            </button>
+            <slot name="trigger"></slot>
             <div class="dropdown__menu">
                 <slot name="content"></slot>
             </div>
@@ -29,7 +22,7 @@ class Dropdown extends HTMLElement {
   }
 
   toggleDropdown() {
-    const button = this.shadowRoot.querySelector('button');
+    const button = this.shadowRoot.querySelector('slot[name="trigger"]');
     const dropdown = this.shadowRoot.querySelector('.dropdown');
 
     button.addEventListener('click', () => {
@@ -52,6 +45,15 @@ class Dropdown extends HTMLElement {
       }
     });
   }
+}
+
+{
+  /* <button 
+class="button dropdown__trigger-button" 
+tabindex="0" 
+aria-expanded="false" 
+aria-haspopup="true"
+> */
 }
 
 class DropdownLink extends HTMLElement {

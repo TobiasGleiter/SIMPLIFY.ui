@@ -1,38 +1,19 @@
 .dropdown {
   position: relative;
   box-sizing: border-box;
-}
-
-.dropdown__trigger-button {
-  display: inline-block;
-  background-color: var(--background-color);
-  color: var(--foreground-color);
-  padding: calc(var(--padding) * 2) calc(var(--padding) * 4);
-  font-size: var(--test-small);
-  border: 1px solid var(--foreground-color);
-  border-radius: var(--border-radius);
-  margin-bottom: var(--gap);
-  cursor: pointer;
-  transition: 0.1s ease;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.dropdown__trigger-button:hover {
-  background-color: var(--foreground-color);
-  color: var(--background-color);
+  font-size: var(--text-small);
+  font-weight: 500;
 }
 
 .dropdown__menu {
   display: none;
   position: absolute;
-  border: 1px solid var(--foreground-color);
-  border-radius: var(--border-radius);
-  background-color: var(--background-color);
+  border: 1px solid var(--popover-foreground);
+  border-radius: var(--radius);
+  color: var(--popover-foreground);
+  background-color: var(--popover);
   min-width: 160px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--shadow);
   z-index: 1;
 }
 
@@ -40,16 +21,16 @@
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  color: var(--foreground-color);
+  color: var(--foreground);
   text-decoration: none;
-  padding: calc(var(--padding) * 2);
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
   transition: 0.1s ease;
   cursor: pointer;
 }
 
 .dropdown__link:hover {
-  color: var(--background-color);
-  background-color: var(--foreground-color);
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 .dropdown__item {
@@ -58,8 +39,8 @@
   gap: var(--gap);
   box-sizing: border-box;
   width: 100%;
-  color: var(--foreground-color);
-  padding: calc(var(--padding) * 2);
+  color: var(--foreground);
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
 }
 
 .dropdown.active .dropdown__menu {
