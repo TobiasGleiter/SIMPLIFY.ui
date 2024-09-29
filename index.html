@@ -23,8 +23,8 @@
         <div src="hero-background.svg" class="hero__image"></div>
         <section class="hero">
           <div class="hero__top">
-            <h1 class="hero__headline">Build your component library</h1>
-            <p class="hero__description">Beautifully designed leightweight web-components that you can copy and paste into your apps.</p>
+            <h1 class="hero__headline">Don't worry about style, just build.</h1>
+            <p class="hero__description">Copy and paste beautifully designed, lightweight web components directly into your apps.</p>
           </div>
           <div>
             <button--base secondary onclick="window.open('/docs', '_self')">Get started</button--base>
@@ -45,8 +45,8 @@
             </div>
           </card--base>
           <card--base>
-            <div slot="header">Input</div>
-            <div slot="description">Prestyled and accessible input with label.</div>
+            <div slot="header">Input & Textarea</div>
+            <div slot="description">Simple accessible and pre-styled input and textarea.</div>
             <div slot="content" class="flex-col gap-2">
               <input--base id="name" placeholder="John Doe">Name</input--base>
               <input--base id="email" placeholder="john@doe.com">Email</input--base>
@@ -55,7 +55,7 @@
           </card--base>
           <card--base>
             <div slot="header">Dropdown</div>
-            <div slot="description">Prestyled and accessible dropdown menu.</div>
+            <div slot="description">Dropdown Menu with simple items and links.</div>
 
             <div slot="content" class="flex-col">
               <dropdown--base>
@@ -77,7 +77,7 @@
           </card--base>
           <card--base>
             <div slot="header">Checkbox</div>
-            <div slot="description">Prestyled and accessible checkbox.</div>
+            <div slot="description">Pre-styled and accessible.</div>
             <div slot="content" class="flex-col gap">
               <checkbox--base checked>Enabled</checkbox--base>
               <checkbox--base disabled>Disabled</checkbox--base>
@@ -85,7 +85,7 @@
           </card--base>
           <card--base>
             <div slot="header">Accordion</div>
-            <div slot="description">Prestyled and accessible accordion.</div>
+            <div slot="description">Best for FAQ-sections.</div>
             <div slot="content">
               <accordion--base name="faq">
                 <div slot="summary">Is it accessible?</div>
@@ -97,13 +97,13 @@
               </accordion--base>
               <accordion--base name="faq">
                 <div slot="summary">Is it animated?</div>
-                <div slot="content">Yes!</div>
+                <div slot="content">No!</div>
               </accordion--base>
             </div>
           </card--base>
           <card--base>
             <div slot="header">Radio-Buttons</div>
-            <div slot="description">Radio buttons.</div>
+            <div slot="description">Pre-styled and accessible.</div>
             <div slot="content">
               <radio-group name="options">
                 <div slot="radio-group" value="option_1">Option 1</div>
@@ -114,7 +114,7 @@
           </card--base>
           <card--base>
             <div slot="header">Badges</div>
-            <div slot="description">Prestyled and accessible badges.</div>
+            <div slot="description">Simple badges without one line of css.</div>
             <div slot="content" class="flex-col gap-2">
               <badge--base>Badge Base</badge--base>
               <badge--base secondary>Badge Secondary</badge--base>
@@ -123,7 +123,7 @@
           </card--base>
           <card--base>
             <div slot="header">Modal</div>
-            <div slot="description">Simple lightweight modal</div>
+            <div slot="description">Easiest modal you can find on the web.</div>
             <div slot="content">
               <button--base onclick="profile.showModal()">Edit Profile</button--base>
               <dialog--base id="profile">
@@ -145,7 +145,7 @@
           </card--base>
           <card--base>
             <div slot="header">Popover</div>
-            <div slot="description">Use the popover with every element you would like.</div>
+            <div slot="description">Use this popover with every element you would like.</div>
             <div slot="content">
               <popover--base>
                 <div slot="trigger">
@@ -157,7 +157,7 @@
           </card--base>
           <card--base>
             <div slot="header">Toast</div>
-            <div slot="description">Simple toasts</div>
+            <div slot="description">Most simple toast you can find on the web.</div>
             <div slot="content" class="flex-col gap">
               <button--base secondary onclick="toast.show('This is an info toast')">Info toast</button--base>
               <button--base secondary onclick="toast.show('This is a success toast', 'success')">Success toast</button--base>
@@ -168,7 +168,7 @@
           </card--base>
           <card--base>
             <div slot="header">Hover</div>
-            <div slot="description">Simple hover card for every component and element.</div>
+            <div slot="description">Use this hover with every element you would like.</div>
             <div slot="content">
               <hover--base>
                 <div slot="trigger"><button--base secondary>Hello!</button--base></div>
