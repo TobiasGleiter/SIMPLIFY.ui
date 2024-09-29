@@ -27,8 +27,8 @@
             <p class="hero__description">Beautifully designed leightweight web-components that you can copy and paste into your apps.</p>
           </div>
           <div>
-            <button--secondary>Get started</button--secondary>
-            <button--base>Components</button--base>
+            <button--base>Get started</button--base>
+            <button--base secondary>Components</button--base>
           </div>
         </section>
         <section class="card-grid gap-2">
@@ -37,10 +37,11 @@
             <div slot="description">Prestyled and accessible buttons.</div>
             <div slot="content" class="flex-col gap">
               <button--base>Base</button--base>
-              <button--light>Light</button--light>
-              <button--dark>Dark</button--dark>
-              <button--primary>Primary</button--primary>
-              <button--secondary>Secondary</button--secondary>
+              <button--base secondary>Secondary</button--base>
+              <button--base ghost>Ghost</button--base>
+              <button--base outline>Outline</button--base>
+              <button--base link>Link</button--base>
+              <button--base disabled>Disabled</button--base>
             </div>
           </card--base>
           <card--base>
@@ -113,8 +114,8 @@
             <div slot="description">Prestyled and accessible badges.</div>
             <div slot="content" class="flex-col gap-2">
               <badge--base>Badge Base</badge--base>
-              <badge--light>Badge Light</badge--light>
-              <badge--dark>Badge Dark</badge--dark>
+              <badge--base secondary>Badge Secondary</badge--base>
+              <badge--base outline>Badge Outline</badge--base>
             </div>
           </card--base>
           <card--base>
