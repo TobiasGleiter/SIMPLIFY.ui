@@ -6,10 +6,8 @@
   padding: calc(var(--padding) - 2px) calc(var(--padding) * 2);
   font-size: var(--text-xs);
   font-weight: 600;
-
   width: fit-content;
   box-sizing: border-box;
-  transition: 0.1s ease;
   color: var(--primary-foreground);
   background-color: var(--primary);
   cursor: default;
