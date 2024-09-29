@@ -21,7 +21,12 @@ class BadgeBase extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="ui/badge.css" />
 
-        <div class="badge"><slot></slot></div>
+        <div 
+          tabindex="0"
+          aria-pressed="false"
+          class="badge">
+          <slot></slot>
+        </div>
     `;
   }
 }
