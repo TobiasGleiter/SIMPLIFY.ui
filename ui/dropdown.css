@@ -8,6 +8,7 @@
 .dropdown__menu {
   display: none;
   position: absolute;
+  margin-top: var(--padding);
   border: 1px solid var(--popover-foreground);
   border-radius: var(--radius);
   color: var(--popover-foreground);
@@ -26,6 +27,10 @@
   padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
   transition: 0.1s ease;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .dropdown__link:hover {

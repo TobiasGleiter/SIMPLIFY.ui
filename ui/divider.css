@@ -7,13 +7,7 @@ hr {
 
 .divider {
   box-sizing: border-box;
-  background-color: var(--foreground-color);
-  width: 100%;
-  opacity: 50%;
-}
-
-.divider--dashed {
-  background-color: var(--foreground-color);
+  background-color: var(--foreground);
   width: 100%;
   opacity: 50%;
 }

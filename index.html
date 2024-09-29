@@ -56,14 +56,15 @@
           <card--base>
             <div slot="header">Dropdown</div>
             <div slot="description">Prestyled and accessible dropdown menu.</div>
+
             <div slot="content" class="flex-col">
               <dropdown--base>
                 <div slot="trigger">
-                  <button--base secondary>Menu</button--base>
+                  <button--base>Menu</button--base>
                 </div>
                 <div slot="content" class="flex-col mb-2 mt">
                   <dropdown__item--base>John Doe</dropdown__item--base>
-                  <divider--base></divider--base>
+                  <divider--base dashed></divider--base>
                   <dropdown__link--base href="/profile">Your profile</dropdown__link--base>
                   <divider--base></divider--base>
                   <dropdown__link--base href="/dashboard">Dashboard</dropdown__link--base>

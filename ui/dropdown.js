@@ -61,7 +61,6 @@ class DropdownLink extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.render();
-    this.attachEvents();
   }
 
   render() {
