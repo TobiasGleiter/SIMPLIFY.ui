@@ -7,13 +7,22 @@ select {
 }
 
 .select {
-  border: 1px solid var(--foreground-color);
-  border-radius: var(--border-radius);
-  padding: calc(var(--padding) * 2);
-  font-size: var(--text-base);
+  border: 1px solid var(--foreground);
+  border-radius: var(--radius);
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
+  font-size: var(--text-small);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-small);
+  gap: var(--gap);
 }
 
 .select::-ms-expand {
   display: none;
+}
+
+.select:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
