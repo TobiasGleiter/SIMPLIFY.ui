@@ -1,16 +1,15 @@
 .accordion {
   border: none;
-  border-bottom: 1px solid var(--foreground-color);
+  border-bottom: 1px solid var(--muted-foreground);
   padding: var(--padding) var(--padding) 0;
-  transition: padding 0.3s ease;
 }
 
 .accordion__summary {
   display: flex;
+  flex: 1 1 0%;
   align-items: center;
   cursor: pointer;
-  font-weight: bold;
-  margin: calc(-1 * var(--padding)) calc(-1 * var(--padding)) 0;
+  font-weight: 500;
   padding: var(--padding);
 }
 
@@ -19,5 +18,7 @@
 }
 
 .accordion__content {
-  padding: calc(var(--padding) * 4);
+  font-size: var(--text-small);
+  overflow: hidden;
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 6);
 }
