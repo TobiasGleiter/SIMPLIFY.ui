@@ -7,22 +7,25 @@ select {
 }
 
 .select {
-  border: 1px solid var(--foreground);
-  border-radius: var(--radius);
-  padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
-  font-size: var(--text-small);
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   font-size: var(--text-small);
   gap: var(--gap);
 }
 
-.select::-ms-expand {
+.select__items {
+  border: 1px solid var(--foreground);
+  border-radius: var(--radius);
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 3);
+  font-size: var(--text-small);
+  cursor: pointer;
+}
+
+.select__items::-ms-expand {
   display: none;
 }
 
-.select:focus-visible {
+.select__items:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }

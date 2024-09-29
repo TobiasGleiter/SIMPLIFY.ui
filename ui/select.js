@@ -11,9 +11,9 @@ class SelectBase extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="ui/select.css" />
-    <label>
+    <label class="select">
       <slot></slot>
-      <select name="${name}" class="select">
+      <select name="${name}" class="select__items">
         <option value="">${placeholder}</option>
       </select>
     </label>
