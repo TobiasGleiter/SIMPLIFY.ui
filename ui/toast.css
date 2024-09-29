@@ -9,13 +9,13 @@
 }
 
 .toast {
-  border: 1px solid var(--foreground-color);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--popup-foreground);
+  border-radius: var(--radius);
   padding: calc(var(--padding) * 2);
   font-size: var(--text-small);
   color: var(--foreground-color);
-  background-color: var(--background-color);
-  box-shadow: var(--shadow);
+  background-color: var(--popup);
+  box-shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--shadow);
   min-width: 200px;
   max-width: 300px;
 }
