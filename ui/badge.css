@@ -19,7 +19,7 @@
   opacity: 80%;
 }
 
-.badge:focus {
+.badge:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
