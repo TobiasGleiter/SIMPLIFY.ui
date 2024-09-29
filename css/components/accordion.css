@@ -1,6 +1,6 @@
 .accordion {
   border: none;
-  border-bottom: 1px solid var(--foreground-color);
+  border-bottom: 1px solid var(--border);
   padding: var(--padding) var(--padding) 0;
   position: relative;
   transition: padding 0.3s ease;
@@ -18,7 +18,7 @@
 }
 
 .accordion__summary::before {
-  content: "►";
+  content: '►';
   position: absolute;
   right: 10px;
   top: 13px;
