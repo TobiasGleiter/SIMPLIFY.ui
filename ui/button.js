@@ -25,10 +25,6 @@ class ButtonBase extends HTMLElement {
       }
     });
 
-    if (this.hasAttribute('primary')) {
-      this.button.classList.add('button--primary');
-    }
-
     if (this.hasAttribute('secondary')) {
       this.button.classList.add('button--secondary');
     }

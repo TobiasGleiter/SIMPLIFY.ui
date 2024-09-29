@@ -1,28 +1,36 @@
 .badge {
   display: inline-flex;
-  width: fit-content;
-  box-sizing: border-box;
-  font-size: var(--text-xs);
+  align-items: center;
   border: 1px solid transparent;
   border-radius: 9999px;
-  padding: 4px 16px;
+  padding: calc(var(--padding) - 2px) calc(var(--padding) * 2);
+  font-size: var(--text-xs);
+  font-weight: 600;
+
+  width: fit-content;
+  box-sizing: border-box;
   transition: 0.1s ease;
-  color: var(--foreground-color);
-  background-color: var(--background-muted-color);
+  color: var(--primary-foreground);
+  background-color: var(--primary);
   cursor: default;
 }
 
 .badge:hover {
-  opacity: 90%;
+  opacity: 80%;
 }
 
-.badge--dark {
-  color: var(--background-color);
-  background-color: var(--foreground-color);
+.badge:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
-.badge--light {
-  border: 1px solid var(--foreground-color);
-  color: var(--foreground-color);
-  background-color: var(--background-color);
+.badge--secondary {
+  color: var(--secondary-foreground);
+  background-color: var(--secondary);
+}
+
+.badge--outline {
+  border: 1px solid var(--input);
+  background-color: var(--background);
+  color: var(--foreground);
 }
