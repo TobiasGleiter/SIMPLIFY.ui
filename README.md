@@ -1,4 +1,4 @@
-# ui.tobiasgleter.de
+# ui.tobiasgleiter.de
 
 Mission: Reduce dependencies and simplify UI-Components using only HTML5/CSS/JS for reusable beautifully styled web-components.
 
