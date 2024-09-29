@@ -16,7 +16,7 @@ body {
   background-color: var(--background-color);
   color: var(--foreground-color);
   font-size: var(--text-base);
-  font-family: "Helvetica", Sans-Serif;
+  font-family: 'Helvetica', Sans-Serif;
 
   height: 100%;
   margin: 0;
@@ -82,4 +82,12 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--gap);
+}
+
+fieldset {
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+  background-color: transparent;
+  font-size: var(--text-base);
+  font-weight: 600;
 }

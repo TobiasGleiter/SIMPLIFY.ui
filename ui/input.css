@@ -1,8 +1,9 @@
 .input {
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
   font-size: var(--text-small);
+  font-weight: 500;
+  gap: var(--gap);
 }
 
 .input input:disabled {
