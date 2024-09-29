@@ -1,56 +1,5 @@
 'use strict';
 
-class RadioGroupBase extends HTMLElement {
-  constructor() {
-    super();
-    const shadow = this.attachShadow({ mode: 'open' });
-
-    const template = document.createElement('template');
-    template.innerHTML = `
-    <link rel="stylesheet" href="ui/radio-group.css" />
-    <div class="radio-group" role="radiogroup"></div>
-    `;
-    shadow.appendChild(template.content.cloneNode(true));
-
-    this.radioGroup = shadow.querySelector('.radio-group');
-  }
-
-  connectedCallback() {
-    this.generateRadioButtons();
-    if (typeof RadioGroup !== 'undefined') {
-      new RadioGroup(this.shadowRoot.querySelector('.radio-group'));
-    }
-  }
-
-  render() {}
-
-  generateRadioButtons() {
-    const groupName = this.getAttribute('name') || 'default-group';
-    const slot = this.querySelectorAll('[slot="radio-group"]');
-
-    slot.forEach((item) => {
-      const value = item.getAttribute('value');
-      const radioButton = document.createElement('div');
-      const textSpan = document.createElement('span');
-
-      radioButton.role = 'radio';
-      radioButton.value = value;
-
-      textSpan.innerText = item.textContent.trim();
-      textSpan.classList.add('radio-group__text');
-
-      radioButton.appendChild(textSpan);
-      this.radioGroup.appendChild(radioButton);
-      this.radioGroup.setAttribute('aria-labelledby', groupName);
-      this.radioGroup.id = groupName;
-    });
-
-    this.innerHTML = '';
-  }
-}
-
-customElements.define('radio-group', RadioGroupBase);
-
 /*
  *   This content is licensed according to the W3C Software License at
  *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
@@ -174,6 +123,57 @@ class RadioGroup {
     event.currentTarget.classList.remove('focus');
   }
 }
+
+class RadioGroupBase extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    const template = document.createElement('template');
+    template.innerHTML = `
+    <link rel="stylesheet" href="ui/radio-group.css" />
+    <div class="radio-group" role="radiogroup"></div>
+    `;
+    shadow.appendChild(template.content.cloneNode(true));
+
+    this.radioGroup = shadow.querySelector('.radio-group');
+  }
+
+  connectedCallback() {
+    this.generateRadioButtons();
+    if (typeof RadioGroup !== 'undefined') {
+      new RadioGroup(this.shadowRoot.querySelector('.radio-group'));
+    }
+  }
+
+  render() {}
+
+  generateRadioButtons() {
+    const groupName = this.getAttribute('name') || 'default-group';
+    const slot = this.querySelectorAll('[slot="radio-group"]');
+
+    slot.forEach((item) => {
+      const value = item.getAttribute('value');
+      const radioButton = document.createElement('div');
+      const textSpan = document.createElement('span');
+
+      radioButton.role = 'radio';
+      radioButton.value = value;
+
+      textSpan.innerText = item.textContent.trim();
+      textSpan.classList.add('radio-group__text');
+
+      radioButton.appendChild(textSpan);
+      this.radioGroup.appendChild(radioButton);
+      this.radioGroup.setAttribute('aria-labelledby', groupName);
+      this.radioGroup.id = groupName;
+    });
+
+    this.innerHTML = '';
+  }
+}
+
+customElements.define('radio-group', RadioGroupBase);
 
 // End content which is licensed according to the W3C Software License at
 // https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
