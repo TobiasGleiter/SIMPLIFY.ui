@@ -7,7 +7,6 @@
   border-radius: calc(var(--radius) * 1);
   font-size: var(--text-small);
   font-weight: 500;
-
   padding: calc(var(--padding) * 2) calc(var(--padding) * 4);
   cursor: pointer;
   color: var(--primary-foreground);
