@@ -1,0 +1,6 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: calc(var(--gap) * 3);
+}
