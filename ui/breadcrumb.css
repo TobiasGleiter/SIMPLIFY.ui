@@ -1,0 +1,21 @@
+.hidden {
+  display: none;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.breadcrumb__link {
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.breadcrumb__link:hover {
+  opacity: 85%;
+}
