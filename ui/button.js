@@ -61,4 +61,4 @@ class ButtonBase extends HTMLElement {
   }
 }
 
-customElements.define('button--base', ButtonBase);
+customElements.define('button-base', ButtonBase);

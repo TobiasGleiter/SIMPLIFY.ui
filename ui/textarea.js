@@ -32,4 +32,4 @@ class TextareaBase extends HTMLElement {
   }
 }
 
-customElements.define('textarea--base', TextareaBase);
+customElements.define('textarea-base', TextareaBase);

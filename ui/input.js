@@ -52,4 +52,4 @@ class InputBase extends HTMLElement {
   }
 }
 
-customElements.define('input--base', InputBase);
+customElements.define('input-base', InputBase);

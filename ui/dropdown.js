@@ -88,6 +88,6 @@ class DropdownItem extends HTMLElement {
   }
 }
 
-customElements.define('dropdown--base', Dropdown);
-customElements.define('dropdown__link--base', DropdownLink);
-customElements.define('dropdown__item--base', DropdownItem);
+customElements.define('dropdown-base', Dropdown);
+customElements.define('dropdown-link', DropdownLink);
+customElements.define('dropdown-item', DropdownItem);

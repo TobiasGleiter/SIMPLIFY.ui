@@ -16,7 +16,7 @@
             <img src="img/logo.svg" width="32px" height="32px" class="logo__img" />
             <span class="logo__text">ui.tobiasgleiter.de</span>
           </div>
-          <div><button--base onclick="window.open('/mission', '_self')">Our Mission</button--base></div>
+          <div><button-base onclick="window.open('/mission', '_self')">Our Mission</button-base></div>
         </div>
       </header>
       <main class="container">
@@ -27,81 +27,81 @@
             <p class="hero__description">Copy and paste beautifully designed, lightweight web components directly into your apps.</p>
           </div>
           <div>
-            <button--base secondary onclick="window.open('/docs', '_self')">Get started</button--base>
-            <button--base secondary onclick="window.open('/docs/components', '_self')">Components</button--base>
+            <button-base secondary onclick="window.open('/docs', '_self')">Get started</button-base>
+            <button-base secondary onclick="window.open('/docs/components', '_self')">Components</button-base>
           </div>
         </section>
         <section class="card-grid gap-2">
-          <card--base>
+          <card-base>
             <div slot="header">Buttons</div>
             <div slot="description">Six different pre-styled and accessible buttons.</div>
             <div slot="content" class="flex-col gap">
-              <button--base>Base</button--base>
-              <button--base secondary>Secondary</button--base>
-              <button--base ghost>Ghost</button--base>
-              <button--base outline>Outline</button--base>
-              <button--base link>Link</button--base>
-              <button--base disabled>Disabled</button--base>
+              <button-base>Base</button-base>
+              <button-base secondary>Secondary</button-base>
+              <button-base ghost>Ghost</button-base>
+              <button-base outline>Outline</button-base>
+              <button-base link>Link</button-base>
+              <button-base disabled>Disabled</button-base>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Input & Textarea</div>
             <div slot="description">Simple accessible and pre-styled input and textarea.</div>
             <div slot="content" class="flex-col gap-2">
-              <input--base id="name" placeholder="John Doe">Name</input--base>
-              <input--base id="email" placeholder="john@doe.com">Email</input--base>
-              <textarea--base disabled placeholder="Write us a message">Message</textarea--base>
+              <input-base id="name" placeholder="John Doe">Name</input-base>
+              <input-base id="email" placeholder="john@doe.com">Email</input-base>
+              <textarea-base disabled placeholder="Write us a message">Message</textarea-base>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Dropdown</div>
             <div slot="description">Dropdown Menu with simple items and links.</div>
 
             <div slot="content" class="flex-col">
-              <dropdown--base>
+              <dropdown-base>
                 <div slot="trigger">
-                  <button--base>Menu</button--base>
+                  <button-base>Menu</button-base>
                 </div>
                 <div slot="content" class="flex-col mb-2 mt">
-                  <dropdown__item--base>John Doe</dropdown__item--base>
-                  <divider--base dashed></divider--base>
-                  <dropdown__link--base href="/profile">Your profile</dropdown__link--base>
-                  <divider--base></divider--base>
-                  <dropdown__link--base href="/dashboard">Dashboard</dropdown__link--base>
-                  <dropdown__link--base href="/settings">Settings</dropdown__link--base>
-                  <divider--base></divider--base>
-                  <dropdown__link--base href="/logout">Logout</dropdown__link--base>
+                  <dropdown-item>John Doe</dropdown-item>
+                  <divider-base dashed></divider-base>
+                  <dropdown-link href="/profile">Your profile</dropdown-link>
+                  <divider-base></divider-base>
+                  <dropdown-link href="/dashboard">Dashboard</dropdown-link>
+                  <dropdown-link href="/settings">Settings</dropdown-link>
+                  <divider-base></divider-base>
+                  <dropdown-link href="/logout">Logout</dropdown-link>
                 </div>
-              </dropdown--base>
+              </dropdown-base>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Checkbox</div>
             <div slot="description">Pre-styled and accessible.</div>
             <div slot="content" class="flex-col gap">
-              <checkbox--base checked>Enabled</checkbox--base>
-              <checkbox--base disabled>Disabled</checkbox--base>
+              <checkbox-base checked>Enabled</checkbox-base>
+              <checkbox-base disabled>Disabled</checkbox-base>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Accordion</div>
             <div slot="description">Best for FAQ-sections.</div>
             <div slot="content">
-              <accordion--base name="faq">
+              <accordion-base name="faq">
                 <div slot="summary">Is it accessible?</div>
                 <div slot="content">Yes!</div>
-              </accordion--base>
-              <accordion--base name="faq">
+              </accordion-base>
+              <accordion-base name="faq">
                 <div slot="summary">Is it styled?</div>
                 <div slot="content">Yes!</div>
-              </accordion--base>
-              <accordion--base name="faq">
+              </accordion-base>
+              <accordion-base name="faq">
                 <div slot="summary">Is it animated?</div>
                 <div slot="content">No!</div>
-              </accordion--base>
+              </accordion-base>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Radio-Buttons</div>
             <div slot="description">Pre-styled and accessible.</div>
             <div slot="content">
@@ -111,72 +111,72 @@
                 <div slot="radio-group" value="option_3">Option 3</div>
               </radio-group>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Badges</div>
             <div slot="description">Simple badges without one line of css.</div>
             <div slot="content" class="flex-col gap-2">
-              <badge--base>Badge Base</badge--base>
-              <badge--base secondary>Badge Secondary</badge--base>
-              <badge--base outline>Badge Outline</badge--base>
+              <badge-base>Badge Base</badge-base>
+              <badge-base secondary>Badge Secondary</badge-base>
+              <badge-base outline>Badge Outline</badge-base>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Modal</div>
             <div slot="description">Easiest modal you can find on the web.</div>
             <div slot="content">
-              <button--base onclick="profile.showModal()">Edit Profile</button--base>
-              <dialog--base id="profile">
+              <button-base onclick="profile.showModal()">Edit Profile</button-base>
+              <dialog-base id="profile">
                 <div slot="header">Edit Profile</div>
                 <div slot="description">Make changes to your profile here. Click save when you're done.</div>
                 <div slot="content" class="flex-col gap-2">
                   <div class="flex-col gap">
-                    <input--base name="user_name" placeholder="John Doe">Name</input--base>
+                    <input-base name="user_name" placeholder="John Doe">Name</input-base>
                   </div>
                   <div class="flex-col gap">
-                    <input--base name="email" placeholder="john@doe.com">Email</input--base>
+                    <input-base name="email" placeholder="john@doe.com">Email</input-base>
                   </div>
                 </div>
                 <div slot="footer">
-                  <button--base>Save</button--base>
+                  <button-base>Save</button-base>
                 </div>
-              </dialog--base>
+              </dialog-base>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Popover</div>
             <div slot="description">Use this popover with every element you would like.</div>
             <div slot="content">
-              <popover--base>
+              <popover-base>
                 <div slot="trigger">
-                  <button--base secondary>Toggle Popover</button--base>
+                  <button-base secondary>Toggle Popover</button-base>
                 </div>
                 <div slot="content">Your popover content here. Use escape to close the popover</div>
-              </popover--base>
+              </popover-base>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Toast</div>
             <div slot="description">Most simple toast you can find on the web.</div>
             <div slot="content" class="flex-col gap">
-              <button--base secondary onclick="toast.show('This is an info toast')">Info toast</button--base>
-              <button--base secondary onclick="toast.show('This is a success toast', 'success')">Success toast</button--base>
-              <button--base secondary onclick="toast.show('This is a warning toast', 'warning')">Warning toast</button--base>
-              <button--base secondary onclick="toast.show('This is an error toast', 'error')">Error toast</button--base>
+              <button-base secondary onclick="toast.show('This is an info toast')">Info toast</button-base>
+              <button-base secondary onclick="toast.show('This is a success toast', 'success')">Success toast</button-base>
+              <button-base secondary onclick="toast.show('This is a warning toast', 'warning')">Warning toast</button-base>
+              <button-base secondary onclick="toast.show('This is an error toast', 'error')">Error toast</button-base>
               <toast-provider id="toast"></toast-provider>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Hover</div>
             <div slot="description">Use this hover with every element you would like.</div>
             <div slot="content">
-              <hover--base>
-                <div slot="trigger"><button--base secondary>Hello!</button--base></div>
+              <hover-base>
+                <div slot="trigger"><button-base secondary>Hello!</button-base></div>
                 <div slot="content">World!</div>
-              </hover--base>
+              </hover-base>
             </div>
-          </card--base>
-          <card--base>
+          </card-base>
+          <card-base>
             <div slot="header">Breadcrumb</div>
             <div slot="description">Simple breadcrumbs.</div>
             <div slot="content">
@@ -188,32 +188,31 @@
                 <breadcrumb-link href="/breadcrumb">Breadcrumb</breadcrumb-link>
               </breadcrumb-base>
             </div>
-          </card--base>
+          </card-base>
         </section>
       </main>
       <footer class="footer">
         <div class="footer__container">
           <span>&copy2024 ui.tobiasgleiter.de</span>
-          <button--base link>Privacy.</button--base>
-          <button--base link>Sitemap.</button--base>
+          <button-base link href="/privacy">Privacy.</button-base>
+          <button-base link href="/sitemap">Sitemap.</button-base>
         </div>
       </footer>
     </div>
     <script src="ui/button.js" type="text/javascript" defer></script>
-    <script src="ui/card.js" type="text/javascript"></script>
-    <script src="ui/input.js" type="text/javascript"></script>
-    <script src="ui/label.js" type="text/javascript"></script>
-    <script src="ui/dropdown.js" type="text/javascript"></script>
-    <script src="ui/checkbox.js" type="text/javascript"></script>
-    <script src="ui/dialog.js" type="text/javascript"></script>
-    <script src="ui/divider.js" type="text/javascript"></script>
-    <script src="ui/accordion.js" type="text/javascript"></script>
-    <script src="ui/radio-group.js" type="text/javascript"></script>
-    <script src="ui/badge.js" type="text/javascript"></script>
-    <script src="ui/popover.js" type="text/javascript"></script>
-    <script src="ui/toast.js" type="text/javascript"></script>
-    <script src="ui/textarea.js" type="text/javascript"></script>
-    <script src="ui/hover.js" type="text/javascript"></script>
-    <script src="ui/breadcrumb.js" type="text/javascript"></script>
+    <script src="ui/card.js" type="text/javascript" defer></script>
+    <script src="ui/input.js" type="text/javascript" defer></script>
+    <script src="ui/dropdown.js" type="text/javascript" defer></script>
+    <script src="ui/checkbox.js" type="text/javascript" defer></script>
+    <script src="ui/dialog.js" type="text/javascript" defer></script>
+    <script src="ui/divider.js" type="text/javascript" defer></script>
+    <script src="ui/accordion.js" type="text/javascript" defer></script>
+    <script src="ui/radio-group.js" type="text/javascript" defer></script>
+    <script src="ui/badge.js" type="text/javascript" defer></script>
+    <script src="ui/popover.js" type="text/javascript" defer></script>
+    <script src="ui/toast.js" type="text/javascript" defer></script>
+    <script src="ui/textarea.js" type="text/javascript" defer></script>
+    <script src="ui/hover.js" type="text/javascript" defer></script>
+    <script src="ui/breadcrumb.js" type="text/javascript" defer></script>
   </body>
 </html>

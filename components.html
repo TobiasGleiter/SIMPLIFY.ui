@@ -14,108 +14,108 @@
       <fieldset>
         <legend>Send us a message</legend>
         <form action="/user/signup" method="POST" novalidate class="flex-col gap-2">
-          <input--base disabled type="text" name="user_name" placeholder="John Doe">Name</input--base>
-          <input--base type="email" name="user_email" placeholder="john@doe.com">Email</input--base>
-          <textarea--base name="user_message" placeholder="Send a message...">Message</textarea--base>
-          <button--base type="submit">Submit</button--base>
+          <input-base disabled type="text" name="user_name" placeholder="John Doe">Name</input-base>
+          <input-base type="email" name="user_email" placeholder="john@doe.com">Email</input-base>
+          <textarea-base name="user_message" placeholder="Send a message...">Message</textarea-base>
+          <button-base type="submit">Submit</button-base>
         </form>
       </fieldset>
       <section class="flex-row gap">
-        <button--base>Base</button--base>
-        <button--base secondary>Secondary</button--base>
-        <button--base ghost>Ghost</button--base>
-        <button--base outline>Outline</button--base>
-        <button--base link>Link</button--base>
-        <button--base disabled>Disabled</button--base>
+        <button-base>Base</button-base>
+        <button-base secondary>Secondary</button-base>
+        <button-base ghost>Ghost</button-base>
+        <button-base outline>Outline</button-base>
+        <button-base link>Link</button-base>
+        <button-base disabled>Disabled</button-base>
       </section>
       <section>
-        <badge--base>Badge Base</badge--base>
-        <badge--base secondary>Badge Base</badge--base>
-        <badge--base outline>Badge Base</badge--base>
+        <badge-base>Badge Base</badge-base>
+        <badge-base secondary>Badge Base</badge-base>
+        <badge-base outline>Badge Base</badge-base>
       </section>
       <section>
-        <popover--base>
+        <popover-base>
           <div slot="trigger">Popover</div>
           <div slot="content">Your customizable popover</div>
-        </popover--base>
+        </popover-base>
       </section>
       <section>
-        <textarea--base id="example" placeholder="Feedback helps the whole community">Let us know</textarea--base>
+        <textarea-base id="example" placeholder="Feedback helps the whole community">Let us know</textarea-base>
       </section>
       <section>
-        <select--base name="gender" id="user_sex" placeholder="Choose a sex">
+        <select-base name="gender" id="user_sex" placeholder="Choose a sex">
           Sex
           <option value="female">Female</option>
           <option value="male">Male</option>
           <option value="other">Other</option>
-        </select--base>
+        </select-base>
       </section>
       <section>
-        <button--base onclick="profile.showModal()">Edit Profile</button--base>
-        <dialog--base id="profile">
+        <button-base onclick="profile.showModal()">Edit Profile</button-base>
+        <dialog-base id="profile">
           <div slot="header">Edit Profile</div>
           <div slot="description">Make changes to your profile here. Click save when you're done.</div>
           <div slot="content" class="flex-col gap-2">
             <div class="flex-col gap">
-              <input--base name="user_name" placeholder="John Doe">Name</input--base>
+              <input-base name="user_name" placeholder="John Doe">Name</input-base>
             </div>
             <div class="flex-col gap">
-              <input--base name="email" placeholder="john@doe.com">Email</input--base>
+              <input-base name="email" placeholder="john@doe.com">Email</input-base>
             </div>
           </div>
           <div slot="footer">
-            <button--base>Save</button--base>
+            <button-base>Save</button-base>
           </div>
-        </dialog--base>
+        </dialog-base>
       </section>
       <section>
-        <dropdown--base>
+        <dropdown-base>
           <div slot="trigger">Menu</div>
           <div slot="content" class="flex-col mb-2 mt">
-            <dropdown__item--base>Tobias Gleiter</dropdown__item--base>
-            <divider--base></divider--base>
-            <dropdown__link--base href="/profile">Your profile</dropdown__link--base>
-            <divider--base></divider--base>
-            <dropdown__link--base href="/dashboard">Dashboard</dropdown__link--base>
-            <dropdown__link--base href="/settings">Settings</dropdown__link--base>
-            <divider--base></divider--base>
-            <dropdown__link--base href="/logout">Logout</dropdown__link--base>
+            <dropdown-item>Tobias Gleiter</dropdown-item>
+            <divider-base></divider-base>
+            <dropdown-link href="/profile">Your profile</dropdown-link>
+            <divider-base></divider-base>
+            <dropdown-link href="/dashboard">Dashboard</dropdown-link>
+            <dropdown-link href="/settings">Settings</dropdown-link>
+            <divider-base></divider-base>
+            <dropdown-link href="/logout">Logout</dropdown-link>
           </div>
-        </dropdown--base>
+        </dropdown-base>
       </section>
       <section>
-        <accordion--base name="faq">
+        <accordion-base name="faq">
           <div slot="summary">Is it accessible?</div>
           <div slot="content">Yes!</div>
-        </accordion--base>
-        <accordion--base name="faq">
+        </accordion-base>
+        <accordion-base name="faq">
           <div slot="summary">Is it styled?</div>
           <div slot="content">Yes!</div>
-        </accordion--base>
-        <accordion--base name="faq">
+        </accordion-base>
+        <accordion-base name="faq">
           <div slot="summary">Is it animated?</div>
           <div slot="content">Yes!</div>
-        </accordion--base>
+        </accordion-base>
       </section>
       <section>
-        <input--base id="nickname" placeholder="Doe">Nickname</input--base>
+        <input-base id="nickname" placeholder="Doe">Nickname</input-base>
       </section>
       <section>
-        <card--base>
+        <card-base>
           <div slot="header">Edit Profile</div>
           <div slot="description">Make changes to your profile here. Click save when you're done.</div>
           <div slot="content" class="flex-col gap-2">
             <div class="flex-col gap">
-              <input--base id="name" placeholder="John Doe">Name</input--base>
+              <input-base id="name" placeholder="John Doe">Name</input-base>
             </div>
             <div class="flex-col gap">
-              <input--base id="email" placeholder="john@doe.com">E-Mail</input--base>
+              <input-base id="email" placeholder="john@doe.com">E-Mail</input-base>
             </div>
           </div>
           <div slot="footer">
-            <button--base>Save</button--base>
+            <button-base>Save</button-base>
           </div>
-        </card--base>
+        </card-base>
       </section>
       <section>
         <radio-group name="options">
@@ -125,19 +125,19 @@
         </radio-group>
       </section>
       <section>
-        <checkbox--base disabled>Checkbox</checkbox--base>
+        <checkbox-base disabled>Checkbox</checkbox-base>
       </section>
       <section class="flex-row gap">
-        <button--base onclick="toast.show('This is an info toast')">Info toast</button--base>
-        <button--base onclick="toast.show('This is a success toast', 'success')">Success toast</button--base>
-        <button--base onclick="toast.show('This is a warning toast', 'warning')">Warning toast</button--base>
-        <button--base onclick="toast.show('This is an error toast', 'error')">Error toast</button--base>
+        <button-base onclick="toast.show('This is an info toast')">Info toast</button-base>
+        <button-base onclick="toast.show('This is a success toast', 'success')">Success toast</button-base>
+        <button-base onclick="toast.show('This is a warning toast', 'warning')">Warning toast</button-base>
+        <button-base onclick="toast.show('This is an error toast', 'error')">Error toast</button-base>
       </section>
       <section>
-        <hover--base>
-          <div slot="trigger"><button--base>Hover everthing!</button--base></div>
+        <hover-base>
+          <div slot="trigger"><button-base>Hover everthing!</button-base></div>
           <div slot="content">World!</div>
-        </hover--base>
+        </hover-base>
       </section>
       <section>
         <breadcrumb-base>
@@ -149,12 +149,12 @@
         </breadcrumb-base>
       </section>
       <section>
-        <pagination--base>
+        <pagination>
           <a href="#">1</a>
           <a href="#">2</a>
           <a href="#">3</a>
           <a href="#">4</a>
-        </pagination--base>
+        </pagination>
       </section>
 
       <bar-chart></bar-chart>
@@ -162,23 +162,20 @@
       <toast-provider id="toast"></toast-provider>
     </main>
     <script src="ui/button.js" type="text/javascript" defer></script>
-    <script src="ui/dialog.js" type="text/javascript" defer></script>
+    <script src="ui/card.js" type="text/javascript" defer></script>
     <script src="ui/input.js" type="text/javascript" defer></script>
-    <script src="ui/label.js" type="text/javascript" defer></script>
-    <script src="ui/accordion.js" type="text/javascript"></script>
-    <script src="ui/select.js" type="text/javascript"></script>
-    <script src="ui/card.js" type="text/javascript"></script>
-    <script src="ui/checkbox.js" type="text/javascript"></script>
-    <script src="ui/dropdown.js" type="text/javascript"></script>
-    <script src="ui/divider.js" type="text/javascript"></script>
-    <script src="ui/badge.js" type="text/javascript"></script>
-    <script src="ui/textarea.js" type="text/javascript"></script>
-    <script src="ui/toast.js" type="text/javascript"></script>
-    <script src="ui/popover.js" type="text/javascript"></script>
-    <script src="ui/radio-group.js" type="text/javascript"></script>
-    <script src="ui/chart.js" type="text/javascript"></script>
-    <script src="ui/hover.js" type="text/javascript"></script>
-    <script src="ui/breadcrumb.js" type="text/javascript"></script>
+    <script src="ui/dropdown.js" type="text/javascript" defer></script>
+    <script src="ui/checkbox.js" type="text/javascript" defer></script>
+    <script src="ui/dialog.js" type="text/javascript" defer></script>
+    <script src="ui/divider.js" type="text/javascript" defer></script>
+    <script src="ui/accordion.js" type="text/javascript" defer></script>
+    <script src="ui/radio-group.js" type="text/javascript" defer></script>
+    <script src="ui/badge.js" type="text/javascript" defer></script>
+    <script src="ui/popover.js" type="text/javascript" defer></script>
+    <script src="ui/toast.js" type="text/javascript" defer></script>
+    <script src="ui/textarea.js" type="text/javascript" defer></script>
+    <script src="ui/hover.js" type="text/javascript" defer></script>
+    <script src="ui/breadcrumb.js" type="text/javascript" defer></script>
     <script src="ui/pagination.js" type="text/javascript"></script>
 
     <script src="js/base.js" type="text/javascript"></script>

@@ -28,4 +28,4 @@ class CardBase extends HTMLElement {
   }
 }
 
-customElements.define('card--base', CardBase);
+customElements.define('card-base', CardBase);

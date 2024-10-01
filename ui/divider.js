@@ -13,4 +13,4 @@ class DividerBase extends HTMLElement {
   }
 }
 
-customElements.define('divider--base', DividerBase);
+customElements.define('divider-base', DividerBase);

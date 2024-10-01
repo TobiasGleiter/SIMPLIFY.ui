@@ -16,7 +16,7 @@ class AccordionBase extends HTMLElement {
   }
 
   collapseOtherAccordions(groupName) {
-    const allAccordions = document.querySelectorAll(`accordion--base[name="${groupName}"]`);
+    const allAccordions = document.querySelectorAll(`accordion-base[name="${groupName}"]`);
     allAccordions.forEach((accordion) => {
       if (accordion !== this) {
         const details = accordion.shadowRoot.querySelector('details');
@@ -38,4 +38,4 @@ class AccordionBase extends HTMLElement {
   }
 }
 
-customElements.define('accordion--base', AccordionBase);
+customElements.define('accordion-base', AccordionBase);

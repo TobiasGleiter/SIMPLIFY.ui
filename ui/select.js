@@ -29,4 +29,4 @@ class SelectBase extends HTMLElement {
   }
 }
 
-customElements.define('select--base', SelectBase);
+customElements.define('select-base', SelectBase);

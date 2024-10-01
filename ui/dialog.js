@@ -37,4 +37,4 @@ class DialogBase extends HTMLElement {
   }
 }
 
-customElements.define('dialog--base', DialogBase);
+customElements.define('dialog-base', DialogBase);

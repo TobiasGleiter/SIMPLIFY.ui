@@ -31,4 +31,4 @@ class BadgeBase extends HTMLElement {
   }
 }
 
-customElements.define('badge--base', BadgeBase);
+customElements.define('badge-base', BadgeBase);

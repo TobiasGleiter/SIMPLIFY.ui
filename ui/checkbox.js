@@ -41,4 +41,4 @@ class CheckboxBase extends HTMLElement {
   }
 }
 
-customElements.define('checkbox--base', CheckboxBase);
+customElements.define('checkbox-base', CheckboxBase);

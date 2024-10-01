@@ -18,4 +18,4 @@ class PaginationBase extends HTMLElement {
   }
 }
 
-customElements.define('pagination--base', PaginationBase);
+customElements.define('pagination-base', PaginationBase);

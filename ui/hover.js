@@ -39,4 +39,4 @@ class Hover extends HTMLElement {
   }
 }
 
-customElements.define('hover--base', Hover);
+customElements.define('hover-base', Hover);

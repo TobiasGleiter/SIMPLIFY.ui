@@ -47,4 +47,4 @@ class PopoverBase extends HTMLElement {
   }
 }
 
-customElements.define('popover--base', PopoverBase);
+customElements.define('popover-base', PopoverBase);
