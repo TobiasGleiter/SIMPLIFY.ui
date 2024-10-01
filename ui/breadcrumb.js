@@ -76,5 +76,5 @@ class BreadcrumLinkBase extends HTMLElement {
   }
 }
 
-customElements.define('breadcrumb--base', BreadcrumbBase);
-customElements.define('breadcrumb__link--base', BreadcrumLinkBase);
+customElements.define('breadcrumb-base', BreadcrumbBase);
+customElements.define('breadcrumb-link', BreadcrumLinkBase);
