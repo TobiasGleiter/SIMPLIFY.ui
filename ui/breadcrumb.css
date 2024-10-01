@@ -5,7 +5,7 @@
 .breadcrumb {
   display: flex;
   flex-direction: row;
-  gap: var(--gap);
+  gap: calc(var(--gap) * 2);
   font-size: var(--text-small);
   font-weight: 500;
   color: var(--foreground);
