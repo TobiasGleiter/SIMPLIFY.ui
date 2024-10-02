@@ -57,32 +57,4 @@ class ButtonBase extends HTMLElement {
   }
 }
 
-class LinkBase extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.render();
-  }
-
-  connectedCallback() {
-    this.link = this.shadowRoot.querySelector('a');
-    ['href', 'target', 'name'].forEach((attr) => {
-      const attrValue = attr === 'required' ? this.hasAttribute(attr) : this.getAttribute(attr);
-
-      if (attrValue !== null && attrValue !== undefined) {
-        this.link[attr] = attrValue;
-      }
-    });
-  }
-
-  render() {
-    this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="ui/button.css" />
-
-      <a class="button button--link"><slot></slot><a/>
-    `;
-  }
-}
-
 customElements.define('button-base', ButtonBase);
-customElements.define('link-base', LinkBase);

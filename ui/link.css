@@ -1,0 +1,24 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border: 0px solid transparent;
+  border-radius: calc(var(--radius) * 1);
+  font-size: var(--text-small);
+  font-weight: 500;
+  padding: calc(var(--padding) * 2) calc(var(--padding) * 4);
+  cursor: pointer;
+  color: var(--primary);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  text-underline-offset: 4px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

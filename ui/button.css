@@ -63,6 +63,7 @@
   color: var(--primary);
   background-color: transparent;
   text-underline-offset: 4px;
+  text-decoration: none;
 }
 
 .button--link:hover {
