@@ -1,12 +1,11 @@
 class LinkBase extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
     this.render();
   }
 
   connectedCallback() {
-    this.link = this.shadowRoot.querySelector('a');
+    this.link = this.querySelector('a');
     ['href', 'target', 'name'].forEach((attr) => {
       const attrValue = attr === 'required' ? this.hasAttribute(attr) : this.getAttribute(attr);
 
@@ -17,10 +16,10 @@ class LinkBase extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
+    this.innerHTML = `
         <link rel="stylesheet" href="ui/link.css" />
   
-        <a class="link"><slot></slot><a/>
+        <a class="link">${this.innerHTML}<a/>
       `;
   }
 }
