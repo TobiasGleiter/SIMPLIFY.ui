@@ -1,3 +1,8 @@
+/* 
+MIT License
+Copyright (c) 2024 Tobias Gleiter 
+*/
+
 class CardBase extends HTMLElement {
   constructor() {
     super();

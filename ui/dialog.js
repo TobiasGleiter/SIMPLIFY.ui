@@ -1,3 +1,8 @@
+/* 
+MIT License
+Copyright (c) 2024 Tobias Gleiter 
+*/
+
 class DialogBase extends HTMLElement {
   constructor() {
     super();

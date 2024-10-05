@@ -1,4 +1,7 @@
-//  REFACTOR WITH: https://www.dannymoerkerke.com/blog/native-form-validation-of-web-components/
+/* 
+MIT License
+Copyright (c) 2024 Tobias Gleiter 
+*/
 
 class InputBase extends HTMLElement {
   static formAssociated = true;

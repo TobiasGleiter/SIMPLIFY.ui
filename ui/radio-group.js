@@ -123,7 +123,13 @@ class RadioGroup {
     event.currentTarget.classList.remove('focus');
   }
 }
+// End content which is licensed according to the W3C Software License at
+// https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
 
+/* 
+MIT License
+Copyright (c) 2024 Tobias Gleiter 
+*/
 class RadioGroupBase extends HTMLElement {
   constructor() {
     super();
@@ -175,8 +181,6 @@ class RadioGroupBase extends HTMLElement {
 
 customElements.define('radio-group', RadioGroupBase);
 
-// End content which is licensed according to the W3C Software License at
-// https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
 window.addEventListener('load', function () {
   var radios = document.querySelectorAll('radio-group');
   radios.forEach((radioGroup) => {

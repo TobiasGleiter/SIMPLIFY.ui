@@ -1,3 +1,8 @@
+/* 
+MIT License
+Copyright (c) 2024 Tobias Gleiter 
+*/
+
 .accordion {
   border: none;
   border-bottom: 1px solid var(--muted-foreground);
