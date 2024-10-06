@@ -56,14 +56,18 @@
           <card-base>
             <div slot="header">Dropdown</div>
             <div slot="description">Dropdown Menu with simple items and links.</div>
-
             <div slot="content" class="flex-col">
               <dropdown-base>
                 <div slot="trigger">
                   <button-base>Menu</button-base>
                 </div>
                 <div slot="content" class="flex-col mb-2 mt">
-                  <dropdown-item>John Doe</dropdown-item>
+                  <dropdown-item>
+                    <div class="flex-row gap-2 items-center">
+                      <avatar-base src="img/avatar.png"></avatar-base>
+                      <span>Tobias Gleiter</span>
+                    </div>
+                  </dropdown-item>
                   <divider-base dashed></divider-base>
                   <dropdown-link href="/profile">Your profile</dropdown-link>
                   <divider-base></divider-base>
@@ -227,5 +231,6 @@
     <script src="ui/breadcrumb.js" type="text/javascript" defer></script>
     <script src="ui/link.js" type="text/javascript" defer></script>
     <script src="ui/pagination.js" type="text/javascript" defer></script>
+    <script src="ui/avatar.js" type="text/javascript" defer></script>
   </body>
 </html>
