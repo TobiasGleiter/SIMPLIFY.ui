@@ -27,3 +27,12 @@ Copyright (c) 2024 Tobias Gleiter
 .link:hover {
   text-decoration: underline;
 }
+
+.link--secondary {
+  color: var(--secondary-foreground);
+}
+
+.link--secondary:hover {
+  color: var(--accent-foreground);
+  text-decoration: none;
+}

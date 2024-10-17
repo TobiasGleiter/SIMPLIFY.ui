@@ -18,6 +18,11 @@ class LinkBase extends HTMLElement {
         this.link[attr] = attrValue;
       }
     });
+
+    if (this.hasAttribute('secondary')) {
+      console.log('secondary');
+      this.link.classList.add('link--secondary');
+    }
   }
 
   render() {
