@@ -13,3 +13,9 @@ Mission: Simplify and reduce dependencies by leveraging only HTML5, CSS, and Jav
 
 - BEM CSS Styling
 - Only HTML5/CSS/JS and web-components, no extra libraries
+
+## Installation
+
+- Copy the desired UI component (JS and CSS file) and paste it into your project
+- Include the JS script into you index.html using defer and it should work
+- (if the styling doesn't apply you have to change the link in the JS component)
