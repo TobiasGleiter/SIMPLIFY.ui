@@ -19,3 +19,7 @@ Mission: Simplify and reduce dependencies by leveraging only HTML5, CSS, and Jav
 - Copy the desired UI component (JS and CSS file) and paste it into your project
 - Include the JS script into you index.html using defer and it should work
 - (if the styling doesn't apply you have to change the link in the JS component)
+
+## Todos
+
+- [ ] Minify js and css
