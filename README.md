@@ -23,3 +23,4 @@ Mission: Simplify and reduce dependencies by leveraging only HTML5, CSS, and Jav
 ## Todos
 
 - [ ] Minify js and css
+- [ ] ui CLI
