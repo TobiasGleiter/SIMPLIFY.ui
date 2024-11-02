@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ui.tobiasgleiter.de</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="app__header header">
+        <div class="logo">
+          <img src="img/logo.svg" width="32px" height="32px" class="logo__img" />
+          <span class="logo__text">Docs</span>
+        </div>
+        <div><div class="header__burger">&#9776;</div></div>
+      </div>
+      <aside class="app__sidebar sidebar">
+        <nav class="sidebar__nav">
+          <h3 class="sidebar__headline">Getting Started</h3>
+          <ul>
+            <li><link-base secondary href="#">Introduction</link-base></li>
+            <li><link-base secondary href="#">Installation</link-base></li>
+          </ul>
+        </nav>
+        <nav class="sidebar__nav">
+          <h3 class="sidebar__headline">Installation</h3>
+          <ul>
+            <li><link-base secondary href="#">Manual</link-base></li>
+          </ul>
+        </nav>
+        <nav class="sidebar__nav">
+          <h3 class="sidebar__headline">Components</h3>
+          <ul>
+            <li><link-base secondary href="#">Button</link-base></li>
+            <li><link-base secondary href="#">Link</link-base></li>
+            <li><link-base secondary href="#">Dropdown</link-base></li>
+            <li><link-base secondary href="#">Accordion</link-base></li>
+            <li><link-base secondary href="#">Badges</link-base></li>
+            <li><link-base secondary href="#">Modal</link-base></li>
+            <li><link-base secondary href="#">Popover</link-base></li>
+            <li><link-base secondary href="#">Toast</link-base></li>
+            <li><link-base secondary href="#">Hover</link-base></li>
+            <li><link-base secondary href="#">Breadcrumb</link-base></li>
+            <li><link-base secondary href="#">Pagination</link-base></li>
+            <li><link-base secondary href="#">Radio Buttons</link-base></li>
+            <li><link-base secondary href="#">Input & Textarea</link-base></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="app__main">
+        <div class="flex-col gap-4">
+          <breadcrumb-base>
+            <breadcrumb-link href="">Docs</breadcrumb-link>
+            <breadcrumb-link href="">Introduction</breadcrumb-link>
+          </breadcrumb-base>
+          <div class="flex-col gap-4">
+            <h2>Introduction</h2>
+            <p>Copy and paste beautifully designed, lightweight web components directly into your apps. No dependencies—just HTML, CSS, and JavaScript.</p>
+            <p>This collection of reusable web components is ready to be added to your project.</p>
+            <p>No installations are required; simply use the plain HTML, CSS, and JavaScript code.</p>
+            <p>Select the components you need and integrate them into your project easily.</p>
+            <p>We’ll be adding more components over time, all free to use.</p>
+          </div>
+          <div>
+            <h2>FAQ</h2>
+            <div class="flex-col gap-2">
+              <accordion-base name="faq">
+                <div slot="summary">Why copy and paste?</div>
+                <div slot="content">
+                  Copying allows you to select only the components you need, adding them as necessary. This gives you full flexibility and the ability to modify components if required.
+                </div>
+              </accordion-base>
+              <accordion-base name="faq">
+                <div slot="summary">Why no dependencies?</div>
+                <div slot="content">
+                  <div class="flex-col gap-2">
+                    <p>Dependencies can complicate your code. With pure HTML, CSS, and JavaScript, you have full control over what the components do.</p>
+                    <p>Explore these components to see how simple and adaptable they are for your needs.</p>
+                  </div>
+                </div>
+              </accordion-base>
+              <accordion-base name="faq">
+                <div slot="summary">Which frameworks are supported?</div>
+                <div slot="content">Web components are compatible with all frameworks.</div>
+              </accordion-base>
+              <accordion-base name="faq">
+                <div slot="summary">Can I use this in my project?</div>
+                <div slot="content">Yes, absolutely.</div>
+              </accordion-base>
+            </div>
+          </div>
+          <div>
+            <button-base secondary>Next: Installation</button-base>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="ui/link.js" type="text/javascript" defer></script>
+    <script src="ui/divider.js" type="text/javascript" defer></script>
+    <script src="ui/breadcrumb.js" type="text/javascript" defer></script>
+    <script src="ui/accordion.js" type="text/javascript" defer></script>
+    <script src="ui/button.js" type="text/javascript" defer></script>
+  </body>
+</html>

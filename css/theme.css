@@ -6,6 +6,7 @@ Copyright (c) 2024 Tobias Gleiter
 /* || THEME & FONTS*/
 :root {
   --background: hsl(0 0% 97%);
+  --muted-background: hsl(0 0% 100%);
   --foreground: hsl(222.2 84% 4.9%);
   --card: hsl(0 0% 100%);
   --card-foreground: hsl(222.2 84% 4.9%);
@@ -50,14 +51,15 @@ Copyright (c) 2024 Tobias Gleiter
 
 /* @media (prefers-color-scheme: dark) {
   :root {
-    --background: hsl(222.2 84% 3.4%);
+    --background: hsl(0 0% 0%);
+    --muted-background: hsl(0 0% 2%);
     --foreground: hsl(210 40% 98%);
     --card: hsl(222.2 84% 4.9%);
     --card-foreground: hsl(220 40% 98%);
-    --popover: hsl(222.2 84% 4.9%);
+    --popover: hsl(0 0% 0%);
     --popover-foreground: hsl(210 40% 98%);
     --primary: hsl(217.2 91.2% 59.8%);
-    --primary-foreground: hsl(222.2 47.4% 11.2%);
+    --primary-foreground: hsl(222, 42%, 73%);
     --secondary: hsl(217.2 32.6% 17.5%);
     --secondary-foreground: hsl(210 40% 98%);
     --muted: hsl(217.2 32.6% 17.5%);
@@ -71,36 +73,3 @@ Copyright (c) 2024 Tobias Gleiter
     --ring: hsl(224.3 76.3% 48%);
   }
 } */
-
-.not-supported {
-  display: none;
-  border: 1px solid #ff0000;
-  color: #ff0000;
-  padding: 5px;
-}
-
-.not-supported.visible {
-  display: block;
-}
-
-.error-message {
-  display: none;
-  border: 1px solid #ff0000;
-  color: #ff0000;
-  padding: 5px;
-}
-
-[invalid] ~ .error-message {
-  display: inline-block;
-  margin-top: 5px;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-}
-
-label + button[type='submit'] {
-  margin-top: 15px;
-}
