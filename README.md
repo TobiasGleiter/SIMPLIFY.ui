@@ -1,4 +1,4 @@
-# ui.tobiasgleiter.de
+# SIMPLIFY.ui
 
 Mission: Simplify and reduce dependencies by leveraging only HTML5, CSS, and JavaScript to create reusable, beautifully styled web components.
 
