@@ -8,6 +8,7 @@ Mission: Simplify and reduce dependencies by leveraging only HTML5, CSS, and Jav
 
 - [x] Simple web-components (including buttons, links, dropdown menus, ...)
 - [ ] SaaS Layout Elements (Sidebar, Nav, ...)
+- [ ] Implement new CSS features
 
 ## Features in this project
 
