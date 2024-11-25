@@ -25,4 +25,4 @@ Mission: Simplify and reduce dependencies by leveraging only HTML5, CSS, and Jav
 
 - [ ] Minify js and css
 - [ ] ui CLI
-- [ ] Svg charts and graphs
+- [ ] Svg charts and graphs (e.g. bar)
