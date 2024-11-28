@@ -1,0 +1,15 @@
+.chart {
+  color: var(--primary-foreground);
+}
+
+.bar {
+  fill: var(--primary);
+  height: 21px;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+.bar:hover,
+.bar:focus {
+  fill: var(--secondary-foreground);
+}
