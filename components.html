@@ -11,7 +11,17 @@
   </head>
   <body>
     <main style="margin: 24px" class="flex-col gap-2">
-      <bar-chart></bar-chart>
+      <bar-chart id="bar-chart" title="Something happening..."></bar-chart>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const chart = document.getElementById('bar-chart');
+          chart.data = [
+            { label: 'Apples', value: 20 },
+            { label: 'Cucumbers', value: 14 },
+            { label: 'Oranges', value: 16 },
+          ];
+        });
+      </script>
       <fieldset>
         <legend>Send us a message</legend>
         <form action="/user/signup" method="POST" novalidate class="flex-col gap-2">

@@ -7,41 +7,38 @@ class BarChart extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.internals = this.attachInternals(); // Access form internals
+    this.internals = this.attachInternals();
+    this._data = [];
     this.render();
   }
 
-  connectedCallback() {}
+  set data(value) {
+    this._data = value;
+    this.render();
+  }
+
+  get data() {
+    return this._data;
+  }
 
   render() {
+    const data = this._data || [];
     this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="ui/barchart.css" />
-        
-        <svg class="chart" width="420" height="150" aria-labelledby="title desc" role="img">
-            <title id="title">A bar chart showing information</title>
-            <desc id="desc">4 apples; 8 bananas; 15 kiwis; 16 oranges; 23 lemons</desc>
-            <g class="bar">
-                <rect width="40" height="19"></rect>
-                <text x="45" y="9.5" dy=".35em">4 apples</text>
+      <link rel="stylesheet" href="ui/barchart.css" />
+      <svg class="chart" width="420" height="${data.length * 30}" aria-labelledby="title desc" role="img">
+        <desc id="desc">${data.map((item) => `${item.value} ${item.label}`).join('; ')}</desc>
+        ${data
+          .map(
+            (item, index) => `
+            <g class="bar" transform="translate(0, ${index * 25})">
+              <rect width="${item.value * 10}" height="20"></rect>
+              <text class="text" x="${item.value * 10 + 5}" y="9.5" dy=".35em">${item.value} ${item.label}</text>
             </g>
-            <g class="bar">
-                <rect width="80" height="19" y="20"></rect>
-                <text x="85" y="28" dy=".35em">8 bananas</text>
-            </g>
-            <g class="bar">
-                <rect width="150" height="19" y="40"></rect>
-                <text x="150" y="48" dy=".35em">15 kiwis</text>
-            </g>
-            <g class="bar">
-                <rect width="160" height="19" y="60"></rect>
-                <text x="161" y="68" dy=".35em">16 oranges</text>
-            </g>
-            <g class="bar">
-                <rect width="230" height="19" y="80"></rect>
-                <text x="235" y="88" dy=".35em">23 lemons</text>
-            </g>
-        </svg>
-      `;
+            `,
+          )
+          .join('')}
+      </svg>
+    `;
   }
 }
 

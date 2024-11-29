@@ -13,3 +13,8 @@
 .bar:focus {
   fill: var(--secondary-foreground);
 }
+
+.bar text {
+  fill: var(--secondary-foreground); /* This will set the text color */
+  font-size: var(--text-small); /* Optional: adjust text size */
+}
