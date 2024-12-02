@@ -1,20 +1,17 @@
-.chart {
-  color: var(--primary-foreground);
+.chart-container {
 }
 
-.bar {
+.bar rect {
   fill: var(--primary);
-  height: 21px;
-  transition: fill 0.3s ease;
-  cursor: pointer;
 }
-
-.bar:hover,
-.bar:focus {
-  fill: var(--secondary-foreground);
+.bar:hover rect {
+  fill: var(--muted-foreground);
 }
-
-.bar text {
-  fill: var(--secondary-foreground); /* This will set the text color */
-  font-size: var(--text-small); /* Optional: adjust text size */
+.bar-label {
+  font-size: var(--text-small);
+  fill: var(--foreground);
+}
+.axis-label {
+  font-size: var(--text-small);
+  text-anchor: middle;
 }

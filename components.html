@@ -16,10 +16,18 @@
         document.addEventListener('DOMContentLoaded', () => {
           const chart = document.getElementById('bar-chart');
           chart.data = [
-            { label: 'Apples', value: 20 },
-            { label: 'Cucumbers', value: 14 },
-            { label: 'Oranges', value: 16 },
+            { label: 'Apples', value: 5 },
+            { label: 'Bananas', value: 8 },
+            { label: 'Cherries', value: 12 },
+            { label: 'Cantaloupes', value: 20 },
+            { label: 'Strawberries', value: 40 },
           ];
+
+          chart.setOptions({
+            labelPosition: 'start', // 'start', 'end', or 'inside'
+            xAxisLabel: 'Quantity',
+            yAxisLabel: 'Fruits',
+          });
         });
       </script>
       <fieldset>
