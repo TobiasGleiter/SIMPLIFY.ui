@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ui.tobiasgleiter.de</title>
-    <description>Simplest UI library without extra dependencies</description>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/utils.css" />
@@ -211,6 +210,32 @@
               </pagination-base>
             </div>
           </card-base>
+          <card-base>
+            <div slot="header">Barchart</div>
+            <div slot="description">Using svgs.</div>
+            <div slot="content">
+              <bar-chart id="bar-chart"></bar-chart>
+              <script>
+                // Example usage:
+                document.addEventListener('DOMContentLoaded', () => {
+                  const chart = document.getElementById('bar-chart');
+                  chart.data = [
+                    { label: 'Apples', value: 5 },
+                    { label: 'Bananas', value: 8 },
+                    { label: 'Cherries', value: 12 },
+                    { label: 'Cantaloupes', value: 20 },
+                    { label: 'Strawberries', value: 40 },
+                  ];
+
+                  chart.setOptions({
+                    width: 300,
+                    xAxisLabel: 'Quantity',
+                    yAxisLabel: 'Fruits',
+                  });
+                });
+              </script>
+            </div>
+          </card-base>
         </section>
       </main>
       <footer class="footer">
@@ -239,5 +264,6 @@
     <script src="ui/link.js" type="text/javascript" defer></script>
     <script src="ui/pagination.js" type="text/javascript" defer></script>
     <script src="ui/avatar.js" type="text/javascript" defer></script>
+    <script src="ui/barchart.js" type="text/javascript" defer></script>
   </body>
 </html>
