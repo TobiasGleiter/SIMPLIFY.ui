@@ -12,7 +12,6 @@ class BarChart extends HTMLElement {
     this._options = {
       width: 420,
       barHeight: 30,
-      labelPosition: 'end', // 'start', 'end', or 'inside'
       xAxisLabel: '',
       yAxisLabel: '',
     };
@@ -35,12 +34,10 @@ class BarChart extends HTMLElement {
 
   render() {
     const data = this._data || [];
-    const { width, barHeight, labelPosition, xAxisLabel, yAxisLabel } = this._options;
+    const { width, barHeight, xAxisLabel, yAxisLabel } = this._options;
 
-    // Calculate total height based on data length
     const height = data.length * barHeight + 60;
 
-    // Find max value for scaling
     const maxValue = Math.max(...data.map((item) => item.value));
 
     this.shadowRoot.innerHTML = `
@@ -78,21 +75,8 @@ class BarChart extends HTMLElement {
               const barY = index * barHeight + 30;
               const barWidth = (item.value / maxValue) * (width - 100);
 
-              let labelX, labelAnchor;
-              switch (labelPosition) {
-                case 'start':
-                  labelX = 5;
-                  labelAnchor = 'start';
-                  break;
-                case 'inside':
-                  labelX = barWidth / 2;
-                  labelAnchor = 'middle';
-                  break;
-                case 'end':
-                default:
-                  labelX = barWidth + 5;
-                  labelAnchor = 'start';
-              }
+              let labelX;
+              labelX = barWidth + 5;
 
               return `
               <g class="bar" transform="translate(50, ${barY})">
@@ -107,7 +91,6 @@ class BarChart extends HTMLElement {
                   y="${barHeight / 2}" 
                   dy=".15em" 
                   class="bar-label"
-                  text-anchor="${labelAnchor}"
                 >
                   ${item.value} ${item.label}
                 </text>
