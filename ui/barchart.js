@@ -1,108 +1,80 @@
-/* 
-MIT License
-Copyright (c) 2024 Tobias Gleiter 
-*/
+class BarItem extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+
+  static get observedAttributes() {
+    return ['value', 'color'];
+  }
+
+  connectedCallback() {
+    const parent = this.closest('bar-chart');
+    if (parent) {
+      parent.calculateNormalizedValues();
+    }
+  }
+
+  attributeChangedCallback() {
+    const parent = this.closest('bar-chart');
+    if (parent) {
+      parent.calculateNormalizedValues();
+    }
+  }
+}
 
 class BarChart extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.internals = this.attachInternals();
-    this._data = [];
-    this._options = {
-      width: 420,
-      barHeight: 30,
-      xAxisLabel: '',
-      yAxisLabel: '',
-    };
-    this.render();
   }
 
-  set data(value) {
-    this._data = value;
-    this.render();
+  connectedCallback() {
+    this.calculateNormalizedValues();
   }
 
-  get data() {
-    return this._data;
-  }
+  calculateNormalizedValues() {
+    const size = parseInt(this.getAttribute('size') || '400');
+    const barItems = Array.from(this.children).filter((child) => child.tagName === 'BAR-ITEM');
 
-  setOptions(options) {
-    this._options = { ...this._options, ...options };
-    this.render();
-  }
-
-  render() {
-    const data = this._data || [];
-    const { width, barHeight, xAxisLabel, yAxisLabel } = this._options;
-
-    const height = data.length * barHeight + 60;
-
-    const maxValue = Math.max(...data.map((item) => item.value));
+    const maxValue = Math.max(...barItems.map((item) => parseFloat(item.getAttribute('value') || '0')));
 
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="ui/barchart.css" />
 
       <div class="chart-container">
-        <svg 
-          class="chart" 
-          width="${width}" 
-          height="${height}" 
-          aria-labelledby="title desc" 
-          role="img"
-        >
-            <text 
-              x="${width / 2}" 
-              y="${height - 15}" 
-              class="axis-label"
-            >
-              ${xAxisLabel}
-            </text>
-            <text 
-              x="15" 
-              y="${height / 2}" 
-              transform="rotate(-90 15,${height / 2})" 
-              class="axis-label"
-            >
-              ${yAxisLabel}
-            </text>
-          <desc id="desc">
-            ${data.map((item) => `${item.value} ${item.label}`).join('; ')}
-          </desc>
+        ${barItems
+          .map((item) => {
+            const value = parseFloat(item.getAttribute('value') || '0');
+            const label = item.textContent.trim();
+            const normalizedWidth = (value / maxValue) * (size - 100);
 
-          ${data
-            .map((item, index) => {
-              const barY = index * barHeight + 30;
-              const barWidth = (item.value / maxValue) * (width - 100);
-
-              let labelX;
-              labelX = barWidth + 5;
-
-              return `
-              <g class="bar" transform="translate(50, ${barY})">
-                <rect 
-                  width="${barWidth}" 
-                  height="${barHeight - 5}" 
-                  rx="3" 
-                  ry="3"
-                ></rect>
-                <text 
-                  x="${labelX}" 
-                  y="${barHeight / 2}" 
-                  dy=".15em" 
-                  class="bar-label"
-                >
-                  ${item.value} ${item.label}
-                </text>
-              </g>
-            `;
-            })
-            .join('')}
-        </svg>
+            return `
+            <div class="bar-container" style="max-width: ${size}px;">
+              <div
+                class="bar"
+                style="width: ${normalizedWidth}px;"
+                title="${label}: ${value}"
+              ></div>
+              <span class="bar-label">${label} (${value})</span>
+            </div>
+          `;
+          })
+          .join('')}
       </div>
     `;
   }
+
+  static get observedAttributes() {
+    return ['size'];
+  }
+
+  attributeChangedCallback(name) {
+    if (name === 'size') {
+      this.calculateNormalizedValues();
+    }
+  }
 }
 
-// Define the custom element
+customElements.define('bar-item', BarItem);
 customElements.define('bar-chart', BarChart);

@@ -1,17 +1,21 @@
-.chart-container {
+:host {
+  display: block;
 }
-
-.bar rect {
-  fill: var(--primary);
+.bar-container {
+  display: flex;
+  align-items: center;
+  height: 30px;
 }
-.bar:hover rect {
-  fill: var(--muted-foreground);
+.bar {
+  height: 20px;
+  background-color: var(--primary);
+  border-radius: var(--radius);
 }
 .bar-label {
-  font-size: var(--text-small);
-  fill: var(--foreground);
+  margin-left: 10px;
+  font-size: 12px;
 }
-.axis-label {
-  font-size: var(--text-small);
-  text-anchor: middle;
+.chart-container {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
 }

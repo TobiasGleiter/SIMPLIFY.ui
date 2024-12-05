@@ -214,26 +214,13 @@
             <div slot="header">Barchart</div>
             <div slot="description">Using svgs.</div>
             <div slot="content">
-              <bar-chart id="bar-chart"></bar-chart>
-              <script>
-                // Example usage:
-                document.addEventListener('DOMContentLoaded', () => {
-                  const chart = document.getElementById('bar-chart');
-                  chart.data = [
-                    { label: 'Apples', value: 5 },
-                    { label: 'Bananas', value: 8 },
-                    { label: 'Cherries', value: 12 },
-                    { label: 'Cantaloupes', value: 20 },
-                    { label: 'Strawberries', value: 40 },
-                  ];
-
-                  chart.setOptions({
-                    width: 300,
-                    xAxisLabel: 'Quantity',
-                    yAxisLabel: 'Fruits',
-                  });
-                });
-              </script>
+              <bar-chart size="400">
+                <bar-item value="5">Apples</bar-item>
+                <bar-item value="8">Bananas</bar-item>
+                <bar-item value="12">Cherries</bar-item>
+                <bar-item value="20">Cantaloupes</bar-item>
+                <bar-item value="40">Strawberries</bar-item>
+              </bar-chart>
             </div>
           </card-base>
         </section>
