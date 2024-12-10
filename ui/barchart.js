@@ -34,33 +34,71 @@ class BarChart extends HTMLElement {
   }
 
   calculateNormalizedValues() {
-    const size = parseInt(this.getAttribute('size') || '400');
+    const size = parseInt(this.getAttribute('size') || '700');
+    const barHeight = 30;
     const barItems = Array.from(this.children).filter((child) => child.tagName === 'BAR-ITEM');
 
+    // Find max value
     const maxValue = Math.max(...barItems.map((item) => parseFloat(item.getAttribute('value') || '0')));
 
+    // Render with normalized width
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="ui/barchart.css" />
-
+      <style>
+        :host {
+          display: block;
+        }
+        .bar-label {
+          font-size: var(--text-small);
+          fill: var(--foreground);
+        }
+      </style>
       <div class="chart-container">
+      <svg
+        xmlns="http://www.w3.org/2000/svg" 
+        width="${size}" 
+        height="${barItems.length * barHeight + 20}"
+      >
         ${barItems
-          .map((item) => {
+          .map((item, index) => {
             const value = parseFloat(item.getAttribute('value') || '0');
             const label = item.textContent.trim();
             const normalizedWidth = (value / maxValue) * (size - 100);
+            const yPosition = index * barHeight + 20;
+            const animationSpeedinMs = 200;
 
             return `
-            <div class="bar-container" style="max-width: ${size}px;">
-              <div
+            <g class="bar-group" data-index="${index}">
+              <rect
                 class="bar"
-                style="width: ${normalizedWidth}px;"
-                title="${label}: ${value}"
-              ></div>
-              <span class="bar-label">${label} (${value})</span>
-            </div>
+                x="50"
+                y="${yPosition}"
+                width="0"
+                height="20"
+                rx="5"
+                ry="5"
+                fill="var(--primary)"
+              >
+                <animate
+                  attributeName="width"
+                  from="0"
+                  to="${normalizedWidth}"
+                  dur="${animationSpeedinMs}ms"
+                  fill="freeze"
+                  begin="${index * 0.01}s"
+                />
+              </rect>
+              <text 
+                x="${50 + normalizedWidth + 10}"
+                y="${yPosition + 15}" 
+                class="bar-label"
+              >
+                ${label} (${value})
+              </text>
+            </g>
           `;
           })
           .join('')}
+      </svg>
       </div>
     `;
   }

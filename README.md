@@ -10,7 +10,7 @@ Mission: Simplify and reduce dependencies by leveraging only HTML5, CSS, and Jav
 - [ ] SaaS Layout Elements (Sidebar, Nav, ...)
 - [ ] Implement new CSS features (e.g. modal animation)
 - [ ] Minify js and css
-- [ ] ui CLI
+- [ ] ui CLI (to manage ui elements)
 - [ ] Svg charts and graphs (e.g. barchart)
 
 ## Features in this project
