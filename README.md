@@ -7,11 +7,11 @@ Mission: Simplify and reduce dependencies by leveraging only HTML5, CSS, and Jav
 ## Project Roadmap
 
 - [x] Simple web-components (including buttons, links, dropdown menus, ...)
-- [ ] SaaS Layout Elements (Sidebar, Nav, ...)
+- [ ] In progress: SaaS Layout Elements (Sidebar, Nav, ...)
 - [ ] Implement new CSS features (e.g. modal animation)
 - [ ] Minify js and css
 - [ ] ui CLI (to manage ui elements)
-- [ ] Svg charts and graphs (e.g. barchart)
+- [ ] In progress: Svg charts and graphs (e.g. barchart)
 
 ## Features in this project
 
