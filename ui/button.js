@@ -3,6 +3,8 @@ MIT License
 Copyright (c) 2024 Tobias Gleiter 
 */
 
+// TODO: Try to make it more simple and reducing Shadow DOM if possible
+
 class ButtonBase extends HTMLElement {
   static formAssociated = true;
 
