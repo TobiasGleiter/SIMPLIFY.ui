@@ -1,37 +1,40 @@
-/* 
+/*
 MIT License
-Copyright (c) 2024 Tobias Gleiter 
+Copyright (c) 2025 Tobias Gleiter
 */
-
 class BadgeBase extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
     this.render();
   }
 
   connectedCallback() {
-    this.badge = this.shadowRoot.querySelector('div');
+    this.badge = this.querySelector('div');
+
+    if (!document.querySelector('#badge-styles')) {
+      const styleSheet = document.createElement('link');
+      styleSheet.id = 'badge-styles';
+      styleSheet.rel = 'stylesheet';
+      styleSheet.href = 'ui/badge.css';
+      document.head.appendChild(styleSheet);
+    }
 
     if (this.hasAttribute('secondary')) {
       this.badge.classList.add('badge--secondary');
     }
-
     if (this.hasAttribute('outline')) {
       this.badge.classList.add('badge--outline');
     }
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="ui/badge.css" />
-
-        <div 
-          tabindex="0"
-          aria-pressed="false"
-          class="badge">
-          <slot></slot>
-        </div>
+    this.innerHTML = `
+      <div
+        tabindex="0"
+        aria-pressed="false"
+        class="badge">
+        ${this.innerHTML}
+      </div>
     `;
   }
 }
